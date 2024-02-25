@@ -1,0 +1,21 @@
+body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16 px; /* base font */
+}
+
+
+.md-font-l { font-size: 3em; } 
+.md-font-m { font-size: 2em; }
+.md-font-s { font-size: 0.9em; }
+.md-font-xs { font-size: 0.5em; }
+
+h1 {
+  
+  font-weight: 500;
+}
