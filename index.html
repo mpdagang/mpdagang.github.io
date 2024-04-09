@@ -12,18 +12,18 @@
           <h1 class="md-logo ">MPD. <span>just another dev</span></h1>
           <nav class="md-nav">
             <ul aria-labelledby="group-1">
-              <li><a href="#site">Site</a><div class="u-line"></div></li>
-              <li><a href="#skills">Skills</a><div class="u-line"></div></li>
-              <li><a href="#tools">Tools</a><div class="u-line"></div></li>
-              <li><a href="#reference">Reference</a><div class="u-line"></div></li>
+              <li><a href="#md-site" onclick="toggleSection('site');">Site</a><div class="u-line"></div></li>
+              <li><a href="#md-skills" onclick="toggleSection('skill');">Skills</a><div class="u-line"></div></li>
+              <li><a href="#tools" onclick="toggleSection('tool');">Tools</a><div class="u-line"></div></li>
+              <li><a href="#reference" onclick="toggleSection('ref');">Reference</a><div class="u-line"></div></li>
             </ul>
           </nav>
         </div>
       </header>
      <div class="scroll-wrapper md-con-m">
         <!-- Site Section -->
-        <section class="md-s-site">
-            <article>
+        <section id="md-site" class="md-s-site md-sec">
+            <article id="md-site-content" class="md-content">
              <h2 id="web-01">Sites Handled</h2>
              <div class="md-item-01">
                <p class="md-f-m">Care giving service</p>
@@ -41,12 +41,83 @@
                <p class="md-f-m">Housing Company Identity, Showcase</p>
                <p class="md-f-l">Cleverly Home JP, Tachikawa<a class="md-f-xs">visit site</a></p> 
              </div>
+             <div class="md-item-01">
+               <p class="md-f-m">Inhouse Web Application</p>
+               <p class="md-f-l">WizTimelog: Attendance, Employee time management system<a class="md-f-xs">visit site</a></p> 
+             </div>
+             <div class="md-item-01">
+               <p class="md-f-m">Inhouse Web Application</p>
+               <p class="md-f-l">WizAdmin: alpha site for Streamlined Unified Settings management of inhouse applications<a class="md-f-xs">visit site</a></p> 
+             </div>
+             <div class="md-item-01">
+               <p class="md-f-m">Company Website</p>
+               <p class="md-f-l">Wisdom Plus Incorprated revamped site<a class="md-f-xs">visit site</a></p> 
+             </div>
             </article>
-            <picture><img src="" alt="current-site"></picture>
+            <!-- <picture><img src="" alt="current-site"></picture> -->
+            <div>
+              <p>IMAGE</p>
+              <div></div>
+            </div>
         </section>
+        <!-- Skills -->
+        <section id="md-skill" class="md-s-skill md-sec">
+          <article id="md-skill-content" class="md-content">
+           <h2 id="web-01">Skills and Abilities</h2>
+           <pre>
+PHP Development
+- Laravel framework
+- Wordpress Plugin, Theme Dev and Admin customization
+
+Test Environment Setup
+- LAMP Server, Virtualization (Virtual Box)
+- Manual Testing (Test Case/Document creation)
+
+Database
+- MySQL (GUI, command line)
+
+Administrative operations
+- Server operations (Apache, Security, firewall/selinux)
+
+Logging, Debugging
+- issue tracking using cmd knowledge and familiarity with
+  Linux OS structure.
+           </pre>
+          </article>
+        </section>
+        <!-- Tools -->
+        <section id="md-tool" class="md-s-tool md-sec">
+            <article id="md-tool-content" class="md-content">
+             <h2 id="web-01">Tools and Technologies Eligibility</h2>
+             <p>HTML</p>
+             <p>CSS</p>
+             <p>Javascript</p>
+             <p>PHP 8</p>
+             <p>Laravel</p>
+             <p>Wordpress</p>
+             <p>GitHub</p>
+             <p>Github Projects, Desktop App, command line</p>
+             <p>Remote Access</p>
+             <p>FTP/SFTP, WinSCP/Firezilla, access via Visual Studio Code</p>
+            </article>
+        </section>
+        <!-- Reference -->
+        <section id="md-ref" class="md-s-ref md-sec">
+            <article id="md-ref-content" class="md-content">
+             <h2 id="web-01">Go to References, Online Documents</h2>
+             <h3>Web Dev General, by W3 and Mozilla</h3>
+             <i>vanilla approach</i>
+             <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">Structuring Web (HTML)</a>  
+             <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">Style the Structure (CSS)</a>  
+             <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript">Dynamic Client Side scripting (JS)</a>
+            </article>
+        </section>
+        
      </div>
 
     </main>
 
+    <!-- Javasrcipt -->
+    <script src="main.js"></script> 
 </body>
 </html>
