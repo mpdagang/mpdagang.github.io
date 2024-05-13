@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
 
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-[jekyll-organization]: https://github.com/jekyll
+Hi! I'm MPD, a Software Developer who's finding where  
+he fits in the Developer/Programmer world. I've been  
+working roughly 6+ years.
+
+

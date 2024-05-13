@@ -1,0 +1,40 @@
+---
+---
+
+body {
+    font-family: 'Trebuchet MS', sans-serif, 'Arial';
+    font-size: 1rem;
+
+    background-color: #0B161D;
+    color: #F8F8F8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header.masthead {
+    display: flex;
+}
+
+.site-logo {
+    font-size: 2em;;
+}
+
+.masthead nav {
+    align-content: center;
+}
+
+.masthead ul.nav-btns {
+    display: flex;
+    align-content: center;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+}
+
+.masthead ul.nav-btns a{
+    color: #55E439;
+}
+
