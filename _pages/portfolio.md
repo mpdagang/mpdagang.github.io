@@ -1,5 +1,0 @@
----
-permalink: /portfolio/
----
-
-## Developer Overview

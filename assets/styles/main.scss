@@ -1,21 +1,62 @@
 ---
 ---
-
+/* Base
+-----------------------------------------*/
 body {
-    font-family: 'Trebuchet MS', sans-serif, 'Arial';
-    font-size: 1rem;
-
-    background-color: #0B161D;
-    color: #F8F8F8;
+  font-family: 'Trebuchet MS', sans-serif, 'Arial';
+  font-size: 1rem;
+  background-color: #0B161D;
+  color: #F8F8F8;
 }
 
+body {
+  --mp-c-bg: #0B161D;
+  --mp-c-primary-01: #000000;
+
+  --mp-f-01: 1.1em;
+}
+/* General
+-----------------------------------------*/
 a {
     text-decoration: none;
     color: inherit;
 }
 
+
+/* Containers
+-----------------------------------------*/
+.mp-con {
+  margin: 0 auto;
+}
+
+.mp-w-s {
+  max-width: 600px;
+}
+.mp-w-m {
+  max-width: 40em;
+}
+.mp-w-l {
+  max-width: 50em;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.card-item {
+    height: 150px;
+}
+
+/* Components
+-----------------------------------------*/
+
+/* Header
+-----------------------------------------*/
 header.masthead {
     display: flex;
+    justify-content: space-between;
 }
 
 .site-logo {
@@ -36,5 +77,72 @@ header.masthead {
 
 .masthead ul.nav-btns a{
     color: #55E439;
+}
+
+/* Footer
+-----------------------------------------*/
+footer {
+  display: flex;
+}
+
+.footer-msg {
+  padding: 50px 0 20px;
+  font-size: 0.8em;
+}
+
+/* Pages
+-----------------------------------------*/
+
+/*-- Portfolio*/
+
+.p-portfolio {
+  position: relative;
+}
+
+.test {
+  transition: 0.8s ease-in-out;
+  background-color: var(--mp-c-bg);
+  opacity: 1;
+  visibility: visible;
+}
+
+.p-portfolio:hover .test {
+  transform: translateX(-700px);
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 20s;
+}
+
+.p-portfolio .card-item {
+  border: 1px solid #F8F8F8;
+  border-radius: 8px;
+  padding: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.p-portfolio .card-item:hover {
+  transform: translateY(-10px);
+}
+
+.p-h-panel {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  padding: 20px;
+  color: var(--mp-c-bg);
+  border: 1px solid var(--mp-c-bg);
+  border-radius: 8px;
+  top: 0;
+  z-index: -1;
+  transform: scale(0.98);
+  transition: 0.8s ease-in-out;
+}
+
+.p-portfolio:hover .p-h-panel{
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  transform: scale(1);
+  transition-delay: 23s;
 }
 
