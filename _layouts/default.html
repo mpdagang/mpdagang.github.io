@@ -21,6 +21,15 @@
     </main>
     <footer class="mp-con mp-w-l">
         <span class="footer-msg">Made with Jekyll</span>
+
+        {% for color in (1..20) %}
+          {% if color < 10 %}
+            <div class="footer-circ footer-circ-0{{color}}"></div>
+          {% else %}
+            <div class="footer-circ footer-circ-{{color}}"></div>
+          {% endif %}
+        {% endfor %}
+
     </footer>
 </body>
 </html>

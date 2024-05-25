@@ -11,8 +11,28 @@ body {
 
 body {
   --mp-c-bg: #0B161D;
-  --mp-c-primary-01: #000000;
-
+  --mp-c-fg: #F8F8F8;
+  --mp-c-lua-00: #C5DFE980;
+  --mp-c-lua-01: #ffaa00;
+  --mp-c-lua-02: #60f0f0;
+  --mp-c-lua-03: #ffb454;
+  --mp-c-lua-04: #6cde97;
+  --mp-c-lua-05: #FB9A4B; /*variable*/
+  --mp-c-lua-06: #9DF39F;
+  --mp-c-lua-07: #EFE900;
+  --mp-c-lua-08: #1E9AE0; /*comment*/
+  --mp-c-lua-09: #FF3A83;
+  --mp-c-lua-10: #edf080;
+  --mp-c-lua-11: #55E439; /*string*/
+  --mp-c-lua-12: #EDEF7D;
+  --mp-c-lua-13: #EB939A;
+  --mp-c-lua-14: #8996A8;
+  --mp-c-lua-15: #AFC4DB;
+  --mp-c-lua-16: #73817D;
+  --mp-c-lua-17: #9EFFFF;
+  --mp-c-lua-18: #5FE461;
+  --mp-c-lua-19: #F6F080;
+  --mp-c-lua-20: #F6AA11;
   --mp-f-01: 1.1em;
 }
 /* General
@@ -76,19 +96,59 @@ header.masthead {
 }
 
 .masthead ul.nav-btns a{
-    color: #55E439;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #55E439;
+
+  transition: 0.3s;
+}
+
+.masthead ul.nav-btns a:hover{
+  filter: invert(0.3);
+  background-color: #000000;
 }
 
 /* Footer
 -----------------------------------------*/
 footer {
   display: flex;
+  padding: 50px 0 20px;
+  align-items: center;;
+  gap: 5px;
 }
 
 .footer-msg {
-  padding: 50px 0 20px;
+  
   font-size: 0.8em;
 }
+
+.footer-circ {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.footer-circ-01 { background-color: var(--mp-c-lua-01); }
+.footer-circ-02 { background-color: var(--mp-c-lua-02); }
+.footer-circ-03 { background-color: var(--mp-c-lua-03); }
+.footer-circ-04 { background-color: var(--mp-c-lua-04); }
+.footer-circ-05 { background-color: var(--mp-c-lua-05); }
+.footer-circ-06 { background-color: var(--mp-c-lua-06); }
+.footer-circ-07 { background-color: var(--mp-c-lua-07); }
+.footer-circ-08 { background-color: var(--mp-c-lua-08); }
+.footer-circ-09 { background-color: var(--mp-c-lua-09); }
+.footer-circ-10 { background-color: var(--mp-c-lua-10); }
+
+.footer-circ-11 { background-color: var(--mp-c-lua-11); }
+.footer-circ-12 { background-color: var(--mp-c-lua-12); }
+.footer-circ-13 { background-color: var(--mp-c-lua-13); }
+.footer-circ-14 { background-color: var(--mp-c-lua-14); }
+.footer-circ-15 { background-color: var(--mp-c-lua-15); }
+.footer-circ-16 { background-color: var(--mp-c-lua-16); }
+.footer-circ-17 { background-color: var(--mp-c-lua-17); }
+.footer-circ-18 { background-color: var(--mp-c-lua-18); }
+.footer-circ-19 { background-color: var(--mp-c-lua-19); }
+.footer-circ-20 { background-color: var(--mp-c-lua-20); }
 
 /* Pages
 -----------------------------------------*/
