@@ -3,8 +3,10 @@
 /* Base
 -----------------------------------------*/
 body {
-  font-family: 'Trebuchet MS', sans-serif, 'Arial';
+  font-family: "Trebuchet MS", sans-serif, "Arial";
   font-size: 1rem;
+  letter-spacing: 0.003em;
+  line-height: 1.5;
   background-color: #0B161D;
   color: #F8F8F8;
 }
@@ -41,6 +43,9 @@ a {
     color: inherit;
 }
 
+ul {
+  margin-left: 1em;
+}
 
 /* Layout
 -----------------------------------------*/
@@ -65,7 +70,7 @@ a {
 }
 
 .card-item {
-    min-height: 80px;
+    min-height: 50px;
 }
 
 
@@ -177,7 +182,6 @@ footer {
   transform: translateX(-700px);
   opacity: 0;
   visibility: hidden;
-  // transition-delay: 20s;
 }
 
 .p-portfolio .card-item {
