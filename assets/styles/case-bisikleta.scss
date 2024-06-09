@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Consolas;
+    font-family: Roboto, Arial, Helvetica, sans-serif, Consolas, "Courier New", "Droid Sans Mono", monospace;
     font-size: 1rem;
     background-color: #f9f0df;
 }
@@ -63,7 +63,7 @@ section#sec-nav {
 }
 
 article header {
-    height: 20vh;
+    height: 80vh;
     text-align: center;
 }
 footer {
@@ -139,6 +139,8 @@ section#bpr-sec h2{
 }
 
 .main-header {
+    padding: 0 20px;
+    align-content: center;
     color: #E83466;
 }
 
@@ -186,6 +188,14 @@ section#bpr-sec h2{
     font-weight: 600;
 }
 
+.rda .bsk-card span {
+    display: inline;
+    padding: 0 0.3em;
+    border-radius: 20px;
+    font-weight: 800;
+    background-color: #ffffff;
+}
+
 .gtp .bsk-card {
     padding: 10px 10px;
     background-color: #fff;
@@ -197,6 +207,11 @@ section#bpr-sec h2{
 
 .gtp .bsk-card p{
     margin: 0;
+}
+
+.gtp .bsk-card span {
+    font-weight: 800;
+    color: #0761B2;
 }
 
 .dct .bsk-card i {
@@ -219,6 +234,11 @@ section#bpr-sec h2{
     border-radius: 20px 10px 10px 10px;
 }
 
+.dct .bsk-card span {
+    font-weight: 600;
+    color: #AC0132;
+}
+
 .ctv .bsk-card{
     border: 3px dashed violet;
     margin-left: 25px;
@@ -230,6 +250,10 @@ section#bpr-sec h2{
     left: -20px;
     top: -4px;
     }
+.ctv .bsk-card span {
+    font-weight: 600;
+    color: #0761B2;
+}
 
 .olv details {
     border: 1px solid #FABB4F;
@@ -283,6 +307,11 @@ section#bpr-sec h2{
     margin: 0;
     background-color: #f9f0df;
     color: #0F8E64;
+}
+
+.bpr-panel span {
+    font-weight: 800;
+    color: #E83466;
 }
 
 /* State
