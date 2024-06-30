@@ -18,4 +18,19 @@ document.addEventListener("DOMContentLoaded", function() {
         let hPanel = document.getElementById("h-panel");
         hPanel.classList.toggle("reveal");
     });
+
+    let gtShowBtn = document.getElementById("gt-show-btn");
+    gtShowBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        let letters = document.getElementsByClassName("gt-anm");
+        for(let i = 0; i < letters.length; i++){
+            letters[i].classList.add("is-move");
+        }
+
+        let pigs = document.getElementsByClassName("gt-pig");
+        for(let i = 0; i < pigs.length; i++){
+            pigs[i].classList.add("hellow");
+        }      
+    });
 });
