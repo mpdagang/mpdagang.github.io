@@ -8,14 +8,40 @@
 </head>
 <body>
     <header class="masthead">
+        <button id="lang-btn" class="set-en selected-en set-tl"></button>
         <nav>
             <div class="nav-btns">
-                <li><a class="nav-btn" href="#rda-sec">After a Road Accident</a></li>
-                <li><a class="nav-btn" href="#gtp-sec">General Tips</a></li>
-                <li><a class="nav-btn" href="#dct-sec">Documentation Tips</a></li>
-                <li><a class="nav-btn" href="#ctv-sec">Requesting CCTV Footage</a></li>
-                <li><a class="nav-btn" href="#olv-sec">Offenses & Laws Violated</a></li>
-                <li><a class="nav-btn" href="#bpr-sec">Request a Blotter & Police Report</a></li>
+                <li>
+                    <a class="nav-btn" data-sect="rda" href="#rda-sec">
+                        <span class="en show">After a Road Accident</span>
+                        <span class="tl">Matapos ang Insidente</span>
+                    </a>
+                </li>
+                <li><a class="nav-btn" data-sect="gtp" href="#gtp-sec">General Tips</a></li>
+                <li>
+                    <a class="nav-btn" data-sect="dct" href="#dct-sec">
+                        <span class="en show">Documentation Tips</span>
+                        <span class="tl">Tips sa Pagdokumento</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-btn" data-sect="ctv" href="#ctv-sec">
+                        <span class="en show">Requesting CCTV Footage</span>
+                        <span class="tl">Paghingi ng CCTV Footage</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-btn" data-sect="olv" href="#olv-sec">
+                        <span class="en show">Offenses & Laws Violated</span>
+                        <span class="tl">Pagkakasala at Nilabag sa Batas</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-btn" data-sect="bpr" href="#bpr-sec">
+                        <span class="en show">Request a Blotter & Police Report</span>
+                        <span class="tl">Paghingi ng Blotter o <em>Police Report</em></span>
+                    </a>
+                </li>
             </div>
         </nav>
     </header>
@@ -25,5 +51,6 @@
     <footer class="main-footer">
     </footer>
     <script src=""></script>
+    <script src="/assets/js/case-bisikleta.js"></script>
 </body>
 </html>

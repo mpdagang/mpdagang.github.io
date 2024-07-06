@@ -27,7 +27,7 @@ h1 {
 /* Layout
 --------------------------------------------------------------------------------*/
 nav {
-    height: 18vh;
+    height: 12em;
 }
 
 nav ul{
@@ -52,6 +52,13 @@ nav ul{
     height: 100%;
 }
 
+#lang-btn {
+    position: absolute;
+    right: 10px;
+    top: -4.5em;
+    height: 3.5em;
+}
+
 section {
     min-height: 82vh;
     padding: 0 20px;
@@ -63,9 +70,14 @@ section#sec-nav {
 }
 
 article header {
-    height: 80vh;
+    height: 50vh;
     text-align: center;
 }
+
+section#rem-sec {
+    height: 30vh;
+}
+
 footer {
     height: 28vh;
 }
@@ -109,12 +121,49 @@ footer {
 	box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
 }
 
+#lang-btn {
+    border: none;
+    border-radius: 12px;
+    background-color: #FFA794;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#lang-btn::before {
+    content: 'English';
+    padding: 0.53em 0.8em;
+}
+
+.set-en.selected-en::before {
+    border-radius: 10px;
+    background-color: #FF3A11;
+    box-shadow: 0 3px 0px 0 #FF2C00;
+}
+
+#lang-btn::after {
+    content: 'Tagalog';
+    padding: 0.53em 0.8em;
+}
+
+.set-tl.selected-tl::after {
+    border-radius: 10px;
+    background-color: #FF3A11;
+    box-shadow: 0 3px 0px 0 #FF2C00;
+}
+
 section h2{
     color: #fff;
     display: inline-block;
     padding: 0 14px;
     border-radius: 20px;
     line-height: 1.5;
+}
+
+section#rem-sec h2{
+    margin: 0;
+    padding: 0;
+    color: #1178D3;
 }
 
 section#rda-sec h2{
@@ -176,6 +225,25 @@ section#bpr-sec h2{
     line-height: 1.4;
 }
 
+.rem-container {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #FABB4F;
+}
+
+.rem-header {
+    padding: 0 0.5em;
+    border-radius: 20px;
+    background-color: #f9f0df;
+}
+
+.rem p span {
+    padding: 0 0.3em;
+    border-radius: 20px;
+    background-color: #1178D3;
+    color: #ffffff;
+}
+
 .rda .bsk-card{
     padding: 0px 10px;
     border: 1px solid #E83466;
@@ -227,10 +295,8 @@ section#bpr-sec h2{
 .dct .bsk-card {
     background-color: #FFCB73;
     margin-left: 0;
-    padding-left: 50px;
-    padding-top: 5px;
+    padding: 5px 10px 10px 50px;
     border-radius: 27px;
-    padding-bottom: 10px;
     border-radius: 20px 10px 10px 10px;
 }
 
@@ -316,3 +382,12 @@ section#bpr-sec h2{
 
 /* State
 --------------------------------------------------------------------------------*/
+.en,
+.tl {
+    display: none;
+}
+
+.en.show,
+.tl.show {
+    display: block;
+}
