@@ -61,6 +61,7 @@ nav ul{
 
 section {
     min-height: 82vh;
+    margin: 0 auto;
     padding: 0 20px 50px;
     max-width: 480px;
 }
@@ -95,16 +96,17 @@ footer {
 }
 
 .nav-btn {
-	text-decoration: none;
 	position: relative;
-	border-radius: 5px;
-    cursor: pointer;
+    display: flex;
     height: 100%;
     width: 100%;
-    display: flex;
+	border-radius: 5px;
     justify-content: center;
     align-items: center;
+	text-decoration: none;
     text-align: center;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .nav-btn {
