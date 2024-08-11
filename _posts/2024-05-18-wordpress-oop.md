@@ -2,8 +2,7 @@
 title: "Wordpress OOP"
 ---
 
-Found a reference on how to develop Wordpress plugins from Procedural to 
-Object Oriented Programming. 
+Build object oriented plugins. 
 
 Links below are Part 0 to 2 of an 8-parter lesson.
 
