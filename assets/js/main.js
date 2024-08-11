@@ -39,4 +39,21 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    let pnrDel = document.getElementById("pnr-del");
+    let pnrForward = document.getElementById("pnr-forward");
+    if(pnrForward != null){
+        pnrForward.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            pnrDel.classList.add("pnr-move");
+        });
+    }
+    let pnrBackward = document.getElementById("pnr-backward");
+    if(pnrBackward != null){
+        pnrBackward.addEventListener("click", function(e) {
+            e.preventDefault();
+            
+            pnrDel.classList.remove("pnr-move");
+        });
+    }
 });

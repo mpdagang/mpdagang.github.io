@@ -374,3 +374,41 @@ footer {
 }
 
 /*---------------------------------------------------------*/
+
+/*-POSTS----------------------------------------------------*/
+.pnr-train-container {
+  margin-top: 100px;
+  overflow: hidden;
+}
+.pnr-del {
+  margin-left: 0;
+  transition: 5s ease-in-out;
+  transform: rotateY(180deg);
+}
+.pnr-move {
+  margin-left: 120%;
+}
+
+.pnr-ctrl-btn {
+  display:inline-block;
+  position:relative;
+  width: auto;
+  padding:16px 18px 14px;
+  margin: 10px 15px 10px 0;
+  border-radius:5px;
+  border:solid 1px #f39c12;
+  box-shadow: 0px 6px 0px #d35400;
+  background:#e67e22;
+  color:#ecf0f1;
+  text-decoration:none;
+  text-align:center;
+  font-weight: 600;
+  font-size: 1.2em;
+	transition: all 0.1s;
+}
+
+.pnr-ctrl-btn:active{
+    box-shadow: 0px 2px 0px #d35400;
+    position:relative;
+    top:4px;
+}
