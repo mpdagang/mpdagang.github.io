@@ -423,3 +423,78 @@ two-up {
   width: 100%;
   height: auto;
 }
+
+// iso/3d cube exp. attempt 2
+.d-pground{
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.scene, .scene div, .scene div::before, .scene div::after {
+  position: absolute;
+  content: '';
+  transform-style: preserve-3d;
+} 
+
+.scene {
+  top: 75%; left: 50%;
+  background-color: #000;
+  transition: 0.8s ease-in-out;
+  transform: rotatex(65deg) rotatez(45deg);
+  transform-origin: center center 100px;
+}
+
+.scene.un-iso {
+  transform: rotateX(0deg) rotatez(0deg);
+}
+
+.cube {
+  --x: 200px;
+  --y: 200px;
+  --z: 200px;
+  --color: #ff0000;
+  --color-bg: #ffffff;
+  top: 50%; left: 50%;
+  width: var(--x);
+  height: var(--y);
+  background-color: color-mix(in display-p3, var(--color) 50%, var(--color-bg));
+  translate: -50% -50%;
+}
+
+.cube::before {
+  width: var(--x); height: var(--z);
+  background-color: color-mix(in display-p3, var(--color) 70%, var(--color-bg));
+  transform-origin: top center;
+  rotate: x 90deg;
+}
+
+.cube::after {
+  width: var(--x); height: var(--z);
+  background-color: color-mix(in display-p3, var(--color) 90%, var(--color-bg));
+  transform-origin: top center;
+  rotate: x 90deg;
+  translate: 0 var(--y);
+}
+
+.cube > div {
+  width: var(--x);
+  height: var(--y);
+  background-color: var(--color);
+  translate: 0 0 var(--z);
+}
+
+.cube > div::before {
+  width: var(--z); height: var(--y);
+  background-color: color-mix(in display-p3, var(--color) 80%, var(--color-bg));
+  rotate: y 90deg;
+  transform-origin: left center;
+}
+
+.cube > div::after {
+  width: var(--z); height: var(--y);
+  background-color: color-mix(in display-p3, var(--color) 80%, var(--color-bg));
+  rotate: y 90deg;
+  transform-origin: left center;
+  translate: var(--x);
+}
