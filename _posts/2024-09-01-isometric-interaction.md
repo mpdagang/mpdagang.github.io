@@ -21,4 +21,5 @@ the object (html) and style it (css), and then add interactions (js).
   </div>
 </div>
 
-<button id="view-top">togggle view</button>
+<button id="view-top">view top</button>
+<button id="view-front">view front</button>
