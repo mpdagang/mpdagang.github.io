@@ -466,7 +466,8 @@ two-up {
   transform: rotateX(0deg) rotatez(0deg);
 }
 .scene.view-front {
-  transform: rotateX(90deg) rotatez(0deg);
+  transition: 1.8s cubic-bezier(0.89, 0.37, 0.53, 0.89);
+  transform: rotateX(90deg) rotatez(0deg) scale3d(1.5, 1.5, 1.5);
 }
 
 .cube {
@@ -517,4 +518,68 @@ two-up {
   rotate: y 90deg;
   transform-origin: left center;
   translate: var(--x);
+}
+
+.cube > div,
+.cube > div::before,
+.cube > div::after,
+.cube,
+.cube::before,
+.cube::after {
+  transition: 0.3s;
+}
+
+.cube.hide > div,
+.cube.hide > div::before,
+.cube.hide > div::after,
+.cube.hide,
+.cube.hide::before,
+.cube.hide::after {
+  transition: 0.3s;
+  border: 1px solid red;
+}
+
+.cube.hide{
+  --color: transparent;
+  --color-bg: transparent;
+}
+
+.cube.blue > div,
+.cube.blue > div::before,
+.cube.blue > div::after,
+.cube.blue,
+.cube.blue::before,
+.cube.blue::after {
+  --x: 60px;
+  --y: 110px;
+  --z: 55px;
+  border:none;
+  --color: #0000ff;
+  --color-bg: #ffffff;
+  // translate: -150% -17%;
+  // translate: 0 0;
+}
+
+.cube.green > div,
+.cube.green > div::before,
+.cube.green > div::after,
+.cube.green,
+.cube.green::before,
+.cube.green::after {
+  --x: 16px;
+  --y: 50px;
+  --z: 30px;
+  border:none;
+  --color: green;
+  --color-bg: #ffffff;
+  // translate: -150% -17%;
+  // translate: 0 0;
+}
+
+.cube.blue {
+  translate: -150% -17%;
+}
+
+.cube.green {
+  translate: -100% 63%;
 }

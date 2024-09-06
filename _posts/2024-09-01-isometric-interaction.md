@@ -15,7 +15,13 @@ the object (html) and style it (css), and then add interactions (js).
 
 <div class="d-pground">
   <div id="test-scene" class="scene">
-      <div class="cube">
+      <div class="cube" id="main-cube">
+        <div></div>
+      </div>  
+      <div class="cube blue">
+        <div></div>
+      </div>    
+      <div class="cube green">
         <div></div>
       </div>  
   </div>
@@ -23,3 +29,4 @@ the object (html) and style it (css), and then add interactions (js).
 
 <button id="view-top">view top</button>
 <button id="view-front">view front</button>
+<button id="reveal">reveal</button>

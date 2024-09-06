@@ -11,4 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
         cube.classList.remove("view-top");
         cube.classList.toggle("view-front");
     });
+
+    let revealBtn = document.getElementById("reveal");
+    revealBtn.addEventListener("click", function(){
+        let cube = document.getElementById("main-cube");
+        cube.classList.toggle("hide");
+    });
 });
