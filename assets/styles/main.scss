@@ -90,6 +90,10 @@ ul {
     min-height: 50px;
 }
 
+.mp-l-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 /* Module
 -----------------------------------------*/
@@ -582,4 +586,89 @@ two-up {
 
 .cube.green {
   translate: -100% 63%;
+}
+
+// becker effects
+
+.d-pground-2{
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.tsc {
+  --tsc-c: #ff6f00;
+  position: absolute;
+  content: '';
+  transform-style: preserve-3d;
+} 
+
+.tsc {
+  top: 20%; left: 50%;
+  // transform-origin: center center 100px;
+  translate: -50% -50%;
+}
+
+.tsc {
+  width: 6px; 
+  height: 6px;
+  background-color: red;
+  border-radius: 6px;
+}
+
+.tsc-head {
+  position: absolute;
+  height: 40px;
+  aspect-ratio: 1 / 1;
+  border-radius: 51% 62% 58% 58% / 65% 61% 45% 48%;
+  border: 6px solid var(--tsc-c);
+  bottom: 0;
+  right: -17px;
+  transform-origin: 20px 100%;
+  transform: rotateZ(0deg);
+  /* transform: rotateZ(-20deg); */
+  transition: 0.3s ease-in-out;
+}
+
+.tsc-arm {
+  position: absolute;
+  width: 6px; height: 55px;
+  border-radius: 10px;
+  transform-origin: 3px 3px;
+  background-color: var(--tsc-c);
+}
+
+.tsc-arm.left {
+  background-color: var(--tsc-c);
+  transform: rotateZ(25deg);
+}
+
+.tsc-arm.right {
+  background-color: var(--tsc-c);
+  transform: rotateZ(-25deg);
+}
+
+.tsc-body {
+  position: absolute;
+  width: 6px; height: 50px;
+  border-radius: 10px;
+  background-color: var(--tsc-c);
+}
+
+.tsc-leg {
+  position: absolute;
+  width: 6px; height: 55px;
+  border-radius: 10px;
+  transform-origin: 3px 3px;
+  background-color: var(--tsc-c);
+  translate: 0 46px 0;
+  transform: rotateZ(20deg);
+}
+
+.tsc-leg.left {
+  transform: rotateZ(20deg);
+}
+
+.tsc-leg.right { 
+  transform: rotateZ(-20deg);
 }
