@@ -9,11 +9,30 @@ permalink: /case/visuals
     <h1>Visualizations</h1>
     <p>HTML -> CSS -> JS</p>
     
-    <section class="vs-c-section">
+    
+    <h2>Creation of the 3D Cube</h2>
+    <p>With the help of 
+       css properties, a flat webpage could have 3D looking elements.
+       Here we can see <code>div</code> elements <em>transformed</em>
+       into a cube.</p>
+    <section id="section-01" class="vs-c-section">
+      <div class="scene">
+        <div class="cube">
+          <div></div>
+        </div>
+      </div>
+      <button type="button" id="to-cube" class="vs-toggle-cube">convert to cube</button>
+    </section>
+    
+    <p>A 360 view shows the other <code>div</code> faces of the cube. By default
+       the there is no perspective shift of the element. We see it Orthogonally,
+      lacking any depth but it's okay for our purpose of perspective views.</p>
+    <section class="vs-c-section-2">
       <div class="scene">
         <div class="cube">
           <div></div>
         </div>
       </div>
     </section>
+
 </article>

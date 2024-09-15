@@ -12,10 +12,6 @@ body {
     color: #F8F8F8;
 }
 
-button {
-    border-radius: 10px;
-}
-
 /* Layout
 --------------------------------------------------------------------------------*/
 
@@ -35,11 +31,26 @@ button {
     margin: 0 auto;
     width: 55vw; 
     min-width: 400px;
+    max-width: 960px;
 }
 
-.vs-c-section {
-    min-height: 80vh;
+.vs-c-section,
+.vs-c-section-2 {
+    position: relative;
+    margin-bottom: 2em;
+    min-height: 75vh;
     border: 1px solid white;
+}
+/*
+Butons
+*/
+.vs-toggle-cube {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    width: 10em;
+    height: 3em;
+    border-radius: 10px;
 }
 
 /* 3D CSS
@@ -50,10 +61,6 @@ body {
   --orange: #ff945b;
 }
 
-.vs-c-section {
-    --vs-time: 4s;
-}
-
 .scene, .scene div, .scene div::before, .scene div::after {
     position: absolute;
     content: '';
@@ -62,7 +69,7 @@ body {
 
 .scene {
     top: 60%; left: 50%;
-    transition: var(--vs-time);
+    transform: rotatex(65deg) rotatez(45deg);
 }
 
 .cube {
@@ -76,64 +83,110 @@ body {
     width: 200px; height: 200px; 
     background-color: var(--red);
     transform-origin: 0px 0px 0px;
-    transition: var(--vs-time) ease-out;
+    rotate: x -270deg;
 }
 
 .cube::after { 
-    content: 'after';
     width: 200px; height: 200px; 
     background-color: blue;
     transform-origin: 0px 200px 0px;
-    transition: var(--vs-time) ease-out;
+    rotate: x 270deg;
 }
 
 .cube > div {
     width: 200px; height: 200px;
     background-color: green;
-    rotate: z 180deg;
-    translate: 0 0 1px;
-    transition: var(--vs-time);
+    translate: 0 0 200px;
 }
 
 .cube > div::before {
     width: 200px; height: 200px;
     background-color: orange;
-    transition: 1.6s;
     transform-origin: 0px 0px 0px;
+    rotate: y -270deg;
 }
 
 .cube > div::after {
     width: 200px; height: 200px;
     background-color: yellow;
-    transition: var(--vs-time);
     transform-origin: 200px 0;
+    rotate: y 270deg;
 }
 
-.vs-c-section:hover .cube::before {
+/* section VS01: base cube animated 
+----------------------------------------*/
+.vs-c-section {
+    --vs-time: 4s;
+}
+
+.vs-c-section .scene {
+    transform: rotatex(0deg) rotatez(0deg);
+    transition: var(--vs-time);
+}
+
+.vs-c-section .cube::before,
+.vs-c-section .cube::after {
+    rotate: x 0deg;
+    transition: var(--vs-time) ease-out;
+}
+
+.vs-c-section .cube > div {
+    translate: 0 0 1px;
+    rotate: z 180deg;
+    transition: var(--vs-time);
+}
+
+.vs-c-section .cube > div::before {
+    transition: 1.6s;
+}
+
+.vs-c-section .cube > div::after {
+    transition: var(--vs-time);
+}
+
+.vs-c-section .cube > div::before,
+.vs-c-section .cube > div::after {
+    rotate: y 0deg;
+}
+
+/*on hover*/
+.vs-c-section.to-cube .cube::before {
     rotate: x -270deg;
 }
 
-.vs-c-section:hover .cube::after {
+.vs-c-section.to-cube .cube::after {
     rotate: x 270deg;
 }
 
-.vs-c-section:hover .cube > div {
+.vs-c-section.to-cube .cube > div {
     rotate: z 0deg;
     translate: 0 0 200px;
 }
 
-.vs-c-section:hover .cube > div::before {
+.vs-c-section.to-cube .cube > div::before {
     rotate: y -270deg;
     transition: var(--vs-time);
     transition-delay: 0.8s;
 }
 
-.vs-c-section:hover .cube > div::after {
+.vs-c-section.to-cube .cube > div::after {
     rotate: y 270deg;
 }
 
-.vs-c-section:hover .scene {
+.vs-c-section.to-cube .scene {
     transform: rotatex(65deg) rotatez(45deg);
 }
+
+/* section VS02: cube 3d rotate 
+   - show sides as viewed as a 3d object
+ *----------------------------------------*/
+
+ .vs-c-section-2 .scene{
+    transition: 5s ease-in-out;
+ }
+
+ .vs-c-section-2:hover .scene{
+    transform: rotatex(115deg) rotatez(405deg);
+ }
 
 
