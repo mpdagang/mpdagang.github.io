@@ -1,0 +1,139 @@
+---
+---
+/* Base
+--------------------------------------------------------------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, Helvetica, sans-serif, Consolas, "Courier New", "Droid Sans Mono", monospace;
+    font-size: 1rem;
+    background-color: #0B161D;
+    color: #F8F8F8;
+}
+
+button {
+    border-radius: 10px;
+}
+
+/* Layout
+--------------------------------------------------------------------------------*/
+
+.vs-con {
+}
+
+.vs-l-grid {
+    display: grid;
+    gap: 10px;
+}
+
+.grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.vs-c-wrapper {
+    margin: 0 auto;
+    width: 55vw; 
+    min-width: 400px;
+}
+
+.vs-c-section {
+    min-height: 80vh;
+    border: 1px solid white;
+}
+
+/* 3D CSS
+--------------------------------------------------------------------------------*/
+body {
+  --red: #ff5e5b;
+  --white: #f8f8f8;
+  --orange: #ff945b;
+}
+
+.vs-c-section {
+    --vs-time: 4s;
+}
+
+.scene, .scene div, .scene div::before, .scene div::after {
+    position: absolute;
+    content: '';
+    transform-style: preserve-3d;
+}
+
+.scene {
+    top: 60%; left: 50%;
+    transition: var(--vs-time);
+}
+
+.cube {
+    top: 50%; left: 50%;
+    width: 200px; height: 200px;
+    background-color: var(--white);
+    translate: -50% -50%;
+}
+
+.cube::before { 
+    width: 200px; height: 200px; 
+    background-color: var(--red);
+    transform-origin: 0px 0px 0px;
+    transition: var(--vs-time) ease-out;
+}
+
+.cube::after { 
+    content: 'after';
+    width: 200px; height: 200px; 
+    background-color: blue;
+    transform-origin: 0px 200px 0px;
+    transition: var(--vs-time) ease-out;
+}
+
+.cube > div {
+    width: 200px; height: 200px;
+    background-color: green;
+    rotate: z 180deg;
+    translate: 0 0 1px;
+    transition: var(--vs-time);
+}
+
+.cube > div::before {
+    width: 200px; height: 200px;
+    background-color: orange;
+    transition: 1.6s;
+    transform-origin: 0px 0px 0px;
+}
+
+.cube > div::after {
+    width: 200px; height: 200px;
+    background-color: yellow;
+    transition: var(--vs-time);
+    transform-origin: 200px 0;
+}
+
+.vs-c-section:hover .cube::before {
+    rotate: x -270deg;
+}
+
+.vs-c-section:hover .cube::after {
+    rotate: x 270deg;
+}
+
+.vs-c-section:hover .cube > div {
+    rotate: z 0deg;
+    translate: 0 0 200px;
+}
+
+.vs-c-section:hover .cube > div::before {
+    rotate: y -270deg;
+    transition: var(--vs-time);
+    transition-delay: 0.8s;
+}
+
+.vs-c-section:hover .cube > div::after {
+    rotate: y 270deg;
+}
+
+.vs-c-section:hover .scene {
+    transform: rotatex(65deg) rotatez(45deg);
+}
+
+
