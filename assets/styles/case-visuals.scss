@@ -59,6 +59,8 @@ body {
   --red: #ff5e5b;
   --white: #f8f8f8;
   --orange: #ff945b;
+
+  --bg-color: #0B161D;
 }
 
 .scene, .scene div, .scene div::before, .scene div::after {
@@ -73,43 +75,47 @@ body {
 }
 
 .cube {
+/*  width       depth       height */
+    --x: 200px; --y: 200px; --z: 200px;
     top: 50%; left: 50%;
-    width: 200px; height: 200px;
-    background-color: var(--white);
+    width: var(--x); height: var(--y);
+    --color: var(--white);
+    background-color: color-mix(in display-p3, var(--color) 50%, var(--bg-color) );
     translate: -50% -50%;
 }
 
 .cube::before { 
-    width: 200px; height: 200px; 
-    background-color: var(--red);
+    width: var(--x); height: var(--z); 
+    background-color: color-mix(in display-p3, var(--color) 70%, var(--bg-color) );
     transform-origin: 0px 0px 0px;
     rotate: x -270deg;
 }
 
 .cube::after { 
-    width: 200px; height: 200px; 
-    background-color: blue;
+    width: var(--x); height: var(--z); 
+    background-color: color-mix(in display-p3, var(--color) 90%, var(--bg-color) );
     transform-origin: 0px 200px 0px;
     rotate: x 270deg;
 }
 
+/* top */
 .cube > div {
-    width: 200px; height: 200px;
-    background-color: green;
-    translate: 0 0 200px;
+    width: var(--x); height: var(--y);
+    background-color: var(--color);
+    translate: 0 0 var(--z);
 }
 
 .cube > div::before {
-    width: 200px; height: 200px;
-    background-color: orange;
+    width: var(--z); height: var(--y);
+    background-color: color-mix(in display-p3, var(--color) 80%, var(--bg-color) );
     transform-origin: 0px 0px 0px;
     rotate: y -270deg;
 }
 
 .cube > div::after {
-    width: 200px; height: 200px;
-    background-color: yellow;
-    transform-origin: 200px 0;
+    width: var(--z); height: var(--y);
+    background-color: color-mix(in display-p3, var(--color) 80%, var(--bg-color) );
+    transform-origin: var(--x) 0;
     rotate: y 270deg;
 }
 
