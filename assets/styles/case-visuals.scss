@@ -35,7 +35,9 @@ body {
 }
 
 .vs-c-section,
-.vs-c-section-2 {
+.vs-c-section-2, 
+.vs-c-section-3,
+.vs-c-section-4{
     position: relative;
     margin-bottom: 2em;
     min-height: 75vh;
@@ -94,8 +96,9 @@ body {
 .cube::after { 
     width: var(--x); height: var(--z); 
     background-color: color-mix(in display-p3, var(--color) 90%, var(--bg-color) );
-    transform-origin: 0px 200px 0px;
+    transform-origin: 0px var(--z) 0px;
     rotate: x 270deg;
+    translate: 0px calc(var(--y) - var(--z));
 }
 
 /* top */
@@ -115,12 +118,13 @@ body {
 .cube > div::after {
     width: var(--z); height: var(--y);
     background-color: color-mix(in display-p3, var(--color) 80%, var(--bg-color) );
-    transform-origin: var(--x) 0;
+    transform-origin: var(--z) 0;
     rotate: y 270deg;
+    translate: calc(var(--x) - var(--z)) 0px;
 }
 
 /* section VS01: base cube animated 
-----------------------------------------*/
+ *------------------------------------------------------------------------------------------------------------------------*/
 .vs-c-section {
     --vs-time: 4s;
 }
@@ -135,6 +139,10 @@ body {
     rotate: x 0deg;
     transition: var(--vs-time) ease-out;
 }
+
+// .vs-c-section:hover .cube > div {
+//     translate: 0px 0px 0px;
+// }
 
 .vs-c-section .cube > div {
     translate: 0 0 1px;
@@ -185,14 +193,279 @@ body {
 
 /* section VS02: cube 3d rotate 
    - show sides as viewed as a 3d object
- *----------------------------------------*/
+ *------------------------------------------------------------------------------------------------------------------------*/
 
  .vs-c-section-2 .scene{
     transition: 5s ease-in-out;
  }
-
  .vs-c-section-2:hover .scene{
     transform: rotatex(115deg) rotatez(405deg);
  }
+
+ /* section VS03: BRT Rig 
+   - 
+ *------------------------------------------------------------------------------------------------------------------------*/
+ 
+ .vs-c-section-3 .scene {
+    transition: 0.5s ease-in-out;
+ }
+ 
+ .cube.resize-cube {
+    /*  width       depth       height */
+    --x: 2em; --y: 4em; --z: 3em;
+ }
+
+/* section VS04: Chicken
+- 
+*------------------------------------------------------------------------------------------------------------------------*/
+
+.vs-c-section-4 {
+    font-size: 20px;
+}
+
+.vs-c-section-4 .cube {
+    /*  width       depth       height */
+    --x: 0px; --y: 0px; --z: 0px;
+    translate: 0px 0px; 
+}
+
+.iso-chicken .scene{
+    transform: rotatex(0deg) rotatez(0deg);
+}
+
+.cube.chkn__head {
+    --x: 6em; --y: 7em; --z: 8em;
+}
+
+.cube.chkn__beak {
+    --x: 4em;
+    --y: 2em;
+    --z: 2em;
+    --color: var(--orange);
+    translate: 1em 7em 4em;
+}
+
+.cube.chkn__wattle {
+    --x: 4em;
+    --y: 1em;
+    --z: 1em;
+    --color: var(--red);
+    translate: 1em 7em 3em;
+}
+
+.cube.chkn__comb {
+    --x: 2em;
+    --y: 5em;
+    --z: 4em;
+    --color: var(--red);
+    translate: 2em 1em 8em;
+}
+
+.cube.chkn__body {
+    --x: 6em;
+    --y: 12em;
+    --z: 6em;
+    translate: 0em -5em -6em;
+    --color: indianred;
+}
+
+/* section VS05: kyubi
+- 
+*------------------------------------------------------------------------------------------------------------------------*/
+
+.kyubi {
+    top: 40%;
+    left: 40%;
+    // color set
+    --kyb-c-00: #3f3e3e;
+    --kyb-c-01: #ce8b55;
+    --kyb-c-02: #e2dfd8;
+    transform-origin: 3em 0em;
+    transition: 10s linear;
+}
+
+.vs-c-section-4:hover .kyubi {
+    transform: rotatex(135deg) rotatez(-405deg);
+}
+
+.cube.kyb__head {
+    --x: 6em; --y: 4em; --z: 2em;
+    --color: var(--kyb-c-01);
+}
+
+.cube.kyb__eye {
+    --x: 1em;
+    --y: 0.1em;
+    --z: 0.5em;
+    --color: var(--kyb-c-00);
+}
+
+.cube.kyb__eye.kyb__eye-left{
+    translate: 1em 4em 0em;
+}
+
+.cube.kyb__eye.kyb__eye-right{
+    translate: 4em 4em 0em;
+}
+
+.cube.kyb__ear{
+    --x: 1.5em;
+    --y: 1em;
+    --z: 1em;
+    --color: var(--kyb-c-01);
+}
+
+.cube.kyb__ear.kyb__ear-left{
+    translate: 0em 0em 2em;
+}
+
+.cube.kyb__ear.kyb__ear-right{
+    translate: 4.5em 0em 2em;
+}
+
+.cube.kyb__ear__accent-01{
+    --x: 1em;
+    --y: 1em;
+    --z: 0.5em;
+    --color: var(--kyb-c-01);
+    translate: 0em 0em 3em;
+}
+
+.cube.kyb__ear__accent-02 {
+    --x: 0.8em;
+    --y: 0em;
+    --z: 0.8em;
+    --color: #cfb7ab;
+    translate: 0.2em 1em 2em;
+}
+
+.cube.kyb__ear__accent-03 {
+    --x: 1em;
+    --y: 1em;
+    --z: 0.5em;
+    --color: var(--kyb-c-01);
+    translate: 5em 0em 3em;
+}
+
+.cube.kyb__ear__accent-04 {
+    --x: 0.8em;
+    --y: 0em;
+    --z: 0.8em;
+    --color: #cfb7ab;
+    translate: 5em 1em 2em;
+}
+
+.cube.kyb__snout {
+    --x: 4em;
+    --y: 1em;
+    --z: 2em;
+    --color: var(--kyb-c-02);
+    translate: 1em 4em -2em;
+}
+
+.cube.kyb__nose {
+    --x: 2em;
+    --y: 0.5em;
+    --z: 1em;
+    --color: var(--kyb-c-00);
+    translate: 2em 5em -1em;
+}
+
+.cube.kyb__main-01 {
+    --x: 8em;
+    --y: 4em;
+    --z: 1.5em;
+    --color: var(--kyb-c-01);
+    translate: -1em 0em -1.5em;
+}
+
+.cube.kyb__main-02{
+    --x: 8em;
+    --y: 4em;
+    --z: 3.5em;
+    --color: var(--kyb-c-02);
+    translate: -1em 0em -5em;
+}
+
+.cube.kyb__main-03 {
+    --x: 6em;
+    --y: 6.5em;
+    --z: 1em;
+    --color: var(--kyb-c-02);
+    translate: 0em -3em -6em;
+}
+
+.cube.kyb__body-01 {
+    --x: 8em;
+    --y: 4em;
+    --z: 5em;
+    --color: var(--kyb-c-01);
+    translate: -1em -4em -5em;
+}
+
+.cube.kyb__tail-01 {
+    --x: 4em;
+    --y: 3em;
+    --z: 4em;
+    --color: #dabaa8;
+    translate: 1em -7em -4em;
+}
+
+.cube.kyb__tail-02 {
+    --x: 4em;
+    --y: 5em;
+    --z: 1em;
+    --color: #dabaa8;
+    translate: 1em -7em 0em;
+}
+
+.cube.kyb__feet{
+    --x: 1em;
+    --y: 1em;
+    --z: 2em;
+    --color: var(--kyb-c-01);
+}
+
+.cube.kyb__feet.kyb__feet-right-01{
+    translate: 5.5em 0em -7em;
+}
+
+.cube.kyb__feet.kyb__feet-right-02{
+    translate: 5.5em -4em -7em;
+}
+
+.cube.kyb__feet.kyb__feet-left-01{
+    translate: -0.5em 0em -7em;
+}
+
+.cube.kyb__feet.kyb__feet-left-02{
+    translate: -0.5em -4em -7em;
+}
+
+.cube.kyb__toe{
+    --x: 1em;
+    --y: 0.4em;
+    --z: 0.5em;
+    --color: var(--kyb-c-01);
+}
+
+.cube.kyb__toe.kyb__toe-right-01{
+    translate: 5.5em 1em -7em;
+}
+
+.cube.kyb__toe.kyb__toe-right-02{
+    translate: 5.5em -3em -7em;
+}
+
+.cube.kyb__toe.kyb__toe-left-01{
+    translate: -0.5em 1em -7em;
+}
+
+.cube.kyb__toe.kyb__toe-left-02{
+    translate: -0.5em -3em -7em;
+}
+
+
+
 
 
