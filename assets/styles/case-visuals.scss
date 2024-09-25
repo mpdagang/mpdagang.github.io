@@ -275,17 +275,61 @@ body {
 
 .kyubi {
     top: 40%;
-    left: 40%;
+    left: 38%;
     // color set
     --kyb-c-00: #3f3e3e;
     --kyb-c-01: #ce8b55;
     --kyb-c-02: #e2dfd8;
     transform-origin: 3em 0em;
-    transition: 10s linear;
+    transition: 0.5s linear;
 }
 
+.kyb-c-wrapper.btn-wrapper{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.kyb-btn {
+    padding: 40px 0;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
 .vs-c-section-4:hover .kyubi {
-    transform: rotatex(135deg) rotatez(-405deg);
+}
+
+.vs-c-section-4.spin .kyubi {
+    animation: infinite-spinning 5s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes infinite-spinning {
+    from {
+        transform: rotatex(65deg) rotatez(45deg);
+    }
+    to {
+        transform: rotatex(65deg) rotatez(405deg);
+    }
+}
+
+.vs-c-section-4.tl .kyubi {
+    transform: rotatex(120deg) rotatez(45deg);
+}
+
+.vs-c-section-4.tr .kyubi {
+    transform: rotatex(120deg) rotatez(-45deg);
+}
+
+.vs-c-section-4.bl .kyubi {
+    transform: rotatex(65deg) rotatez(45deg);
+}
+
+.vs-c-section-4.br .kyubi {
+    transform: rotatex(65deg) rotatez(-45deg);
 }
 
 .cube.kyb__head {
