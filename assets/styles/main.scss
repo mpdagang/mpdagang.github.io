@@ -46,6 +46,10 @@ body {
   --mp-f-01: 1.1em;
 }
 
+main {
+  min-height: 78vh;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -125,6 +129,7 @@ ul {
 header.masthead {
     display: flex;
     justify-content: space-between;
+    padding: 1rem 0;
 }
 
 .site-logo {
@@ -156,6 +161,96 @@ header.masthead {
   background-color: #000000;
 }
 
+/* logo
+-----------------------------------------*/
+
+.md-lg-b {
+  font-size: 10px;
+  --x: 3em; 
+  --color-m: #d5e2ef;
+  --color-p: #9cbbd9;
+  --color-d: #6394c4;
+}
+
+.md-lg-b {
+  width: var(--x); height: var(--x);
+  transform-style: preserve-3d;
+}
+.md-lg-b div {
+  position: absolute;
+  content: '';
+  transform-style: preserve-3d;
+}
+
+.md-lg-b {
+  transform: rotatex(60deg) rotatez(45deg);
+  transform-origin: calc(var(--x) / 2) calc(var(--x) / 2) calc(var(--x) / 2) ;
+}
+
+.md-lg-b, .md-lg-b * {
+  transition: 1s ease-in-out;
+}
+
+.md-lg-s {
+  width: var(--x); height: var(--x);
+}
+
+.md-lg-s__m {
+  background-color: var(--color-m);
+  translate: 0 0 var(--x);
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 50% 50%, 0 0);
+}
+
+.md-lg-s__p {
+  background-color: var(--color-p);
+  transform: rotateX(-90deg);
+  transform-origin: bottom center;
+  clip-path: polygon(0 0, 0 50%, 100% 50%, 100% 0);
+}
+
+.md-lg-s__d {
+  background-color: var(--color-d);
+  transform: rotateZ(-90deg) rotateX(-90deg);
+  transform-origin: bottom left;
+  translate: var(--x) 0 0;
+}
+
+.md-lg-s__d.d-1 {
+  clip-path: polygon(100% 0, 100% 100%, 50% 100%, 0 50%, 0 0);
+}
+
+.md-lg-s__d.d-2 {
+  transform: rotateZ(-90deg) rotateX(-90deg);
+  transform-origin: bottom left;
+  translate: 0 0 0;
+}
+
+.md-lg-b:hover {
+  transform: rotatex(60deg) rotatez(405deg);
+}
+
+.md-lg-b-link:active .md-lg-s__m, 
+.md-lg-b-link:active .md-lg-s__p, 
+.md-lg-b-link:active .md-lg-s__d {
+  transition: 0.2s;
+  background-color: var(--mp-c-lua-03);
+}
+
+.md-lg-b-link:active .md-lg-s__m{
+  translate: 0 0 calc(var(--x) + 0.2em);
+}
+
+.md-lg-b-link:active .md-lg-s__p{
+  translate: 0 0.2em 0;
+}
+
+.md-lg-b-link:active .md-lg-s__d.d-1{
+  translate: calc(var(--x) + 0.2em) 0 0;
+}
+
+.md-lg-b-link:active .md-lg-s__d.d-2{
+    translate: 0 0.2em 0;
+}
 /* Footer
 -----------------------------------------*/
 footer {
