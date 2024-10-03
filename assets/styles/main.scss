@@ -780,6 +780,87 @@ two-up {
 
 .tsc-leg.right { 
   transform: rotateZ(-20deg);
+}
+
+//  kyubi the pom
+
+
+.cube.kby-body {
+  --x: 100px;
+  --y: 100px;
+  --z: 100px;
+  border:none;
+  --color: rgb(184, 129, 28);
+}
+
+.cube.kby-body {
+  --x: 100px;
+  --y: 100px;
+  --z: 100px;
+  border:none;
+  --color: rgb(184, 129, 28);
+}
+
+.kby-ear {
+  --x: 30px;
+  --y: 30px;
+  --z: 30px;
+  border:none;
+  --color: rgb(147, 107, 34);
+}
+
+.kby-ear__left {
+  translate: -49px 20px 100px
+}
+
+.kby-ear__right {
+  translate: 20px 20px 100px
+}
+
+.kby-eye {
+  --x: 10px;
+  --y: 10px;
+  --z: 10px;
+  border:none;
+  --color: rgb(46, 34, 12);
+}
+
+
+.kby-eye__left {
+  translate: -30px 44px 80px;
+}
+
+.kby-eye__right {
+  translate: 20px 44px 80px;
+}
+
+.cube.kby-snout {
+  --x: 60px;
+  --y: 10px;
+  --z: 30px;
+  border:none;
+  --color: rgb(208, 155, 57);
+  translate: -30px 47px 50px;
+}
+
+.cube.kby-nose {
+  --x: 15px;
+  --y: 5px;
+  --z: 10px;
+  border:none;
+  --color: rgb(33, 26, 11);
+  translate: -10px 57px 68px;
+}
+
+.kby-chest {
+  --x: 80px;
+  --y: 5px;
+  --z: 60px;
+  border:none;
+  --color: rgb(227, 187, 111);
+  translate: -40px 47px 00px;
+}
+
 
 /* front page sample graphic
 ------------------------------------------------------------*/
