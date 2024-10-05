@@ -62,7 +62,7 @@ nav ul{
 section {
     min-height: 82vh;
     margin: 0 auto;
-    padding: 0 20px 50px;
+    padding: 2em 20px 50px;
     max-width: 480px;
 }
 
@@ -83,6 +83,15 @@ footer {
     height: 28vh;
 }
 
+.bsk-l-back {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #f9f0df;
+    
+    z-index: 99;
+}
 
 /* Module
 --------------------------------------------------------------------------------*/
@@ -95,6 +104,16 @@ footer {
     z-index: 99;
 }
 
+.bsk-u-backlink {
+    padding: 5px 10px;
+    margin-left: 10px;
+    color:#0F8E64;
+    background-color: #90e3c7;
+    border-radius: 10px;
+    border-bottom: 3px solid #0F8E64;
+    font-size: 0.7em;
+    text-decoration: none;
+}
 .nav-btn {
 	position: relative;
     display: flex;

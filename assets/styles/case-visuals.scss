@@ -43,9 +43,8 @@ body {
     min-height: 75vh;
     border: 1px solid white;
 }
-/*
-Butons
-*/
+
+// Butons
 .vs-toggle-cube {
     position: absolute;
     bottom: 1em;
@@ -53,6 +52,37 @@ Butons
     width: 10em;
     height: 3em;
     border-radius: 10px;
+}
+
+// head nav
+.vs-l-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #0B161D;
+    box-shadow: 1px -11px 20px black;
+    z-index: 99;
+}
+
+.vs-l-header__wrapper {
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 55vw; 
+}
+
+.vs-u-link {
+    text-decoration: none;
+    padding: 5px 15px;
+    line-height: 1;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+.vs-u-link:hover{
+    filter: opacity(0.5);
 }
 
 /* 3D CSS
