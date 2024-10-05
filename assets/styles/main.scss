@@ -92,8 +92,10 @@ ul {
 
 .card-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .card-item {
@@ -106,12 +108,26 @@ ul {
 }
 
 .mp-l-hero {
-  height: 40vh;
+  min-height: 50vh;
   align-items: center;
 }
 
 .mp-l-wrapper {
   position: relative;
+}
+
+.mp-u-m-3 { margin-bottom: 3rem }
+.mp-u-m-4 { margin-bottom: 4rem }
+.mp-u-m-5 { margin-bottom: 5rem }
+
+@media (min-width: 540px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: none;
+    margin: 0;
+  }
 }
 
 /* Module
@@ -176,7 +192,7 @@ header.masthead {
   background-color: #000000;
 }
 
-/* logo
+/* logo start
 -----------------------------------------*/
 
 .md-lg-b {
@@ -265,6 +281,9 @@ header.masthead {
 .masthead:hover .md-lg-s__d.d-2{
     translate: 0 0.2em 0;
 }
+/* logo end
+-----------------------------------------*/
+
 /* Footer
 -----------------------------------------*/
 footer {
