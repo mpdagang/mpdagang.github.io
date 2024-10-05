@@ -866,9 +866,9 @@ two-up {
 ------------------------------------------------------------*/
 
 .fps {
-  font-size: 60px;
+  font-size: clamp(30px, 10vw, 60px);
   --x: 3em;
-  --color: red;
+  --color: transparent; // border color
   --origin: calc(var(--x) / 2);
 }
 
@@ -931,13 +931,28 @@ two-up {
   translate: 0 0 0;
 }
 
+.fps-s__b {
+  top: -1px;
+  left: -1px;
+  border: 1px solid var(--color);
+  transform: rotateX(90deg);
+  transform-origin: top right;
+}
+
+.fps-s__t { background-color: rgba($color: #ffff00, $alpha: 0.2); }
+.fps-s__f { background-color: rgba($color: #0000ff, $alpha: 0.2); }
+.fps-s__l { background-color: rgba($color: #ff0000, $alpha: 0.2); }
+.fps-s__r { background-color: rgba($color: #00ff00, $alpha: 0.2); }
+.fps-s__b { background-color: rgba($color: #ff00ff, $alpha: 0.2); }
+.fps-s__bb { background-color: rgba($color: #ffffff, $alpha: 0.2); }
+
 .fps-s__circ {
   width: calc(var(--x) - 2px); height: calc(var(--x) - 2px);
   border: 1px solid transparent;
   border-radius: 50%;
 
   translate: 0 0 var(--origin);
-  transform: rotateZ(45deg) rotateY(45deg);
+  transform: rotateZ(45deg) rotateY(60deg);
   background: radial-gradient(circle at 65% 15%, white 1px, #60f0f0 3%, #1E9AE0 60%, #60f0f0 100%);
   
   transition: 1s;
@@ -945,9 +960,10 @@ two-up {
 
 .fps:hover {
   // font-size: 60px;
+  --color: white;
   transform: rotatex(60deg) rotatez(135deg);
 }
 
 .fps:hover .fps-s__circ {
-  transform: rotateZ(-45deg) rotateY(45deg);
+  transform: rotateZ(-45deg) rotateY(60deg);
 }
