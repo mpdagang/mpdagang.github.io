@@ -1,0 +1,129 @@
+---
+---
+/* Base
+--------------------------------------------------------------------------------*/
+.animation-obj {
+  width: 100%;
+  height: 100%;;
+}
+
+.pg-block {
+    position: absolute;
+}
+
+.pg-block__inner {
+    position: relative;
+}
+
+/*
+--------------------------------------------------------------------------------*/
+.kyubi-block {
+    --kb-c-00: #3f3e3e;
+    --kb-c-01: #ce8b55;
+    --kb-c-02: #e2dfd8;
+
+    width: 20px;
+    height: 20px;
+    background-color: #0505051c;
+    transform-style: preserve-3d;
+    offset-path: path('M 30 180 L 30 60 Q 30 30 60 30 L 180 30 Q 210 30 210 60 L 210 180 Q 210 210 180 210 Q 120 210 60 210 Q 30 210 30 180 Z');
+    animation: walk 9000ms infinite linear;
+}
+
+.kyubi {
+    width: 100%;
+    height: 100%;
+    animation: jump 700ms infinite ease-out;
+    transform-style: preserve-3d;
+}
+
+.kyubi__feet.kyubi__feet-bl,
+.kyubi__feet.kyubi__feet-br {
+    animation: swing 700ms infinite ease-out;
+}
+
+.kyubi__feet.kyubi__feet-fl,
+.kyubi__feet.kyubi__feet-fr {
+    animation: swing-rev 700ms infinite ease-out;
+}
+
+/*
+--------------------------------------------------------------------------------*/
+
+@keyframes walk {
+    0% {
+        offset-distance: 0%;
+        transform: rotateX(0deg);
+    }
+    17%{
+        transform: rotateX(0deg);
+    }
+    21% {
+        transform: rotateX(-30deg);
+    }
+    25% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        offset-distance: 100%;
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes jump {
+    0% {
+        translate: 0 0 3px;
+        transform: rotateY(0deg);
+    } 
+    25% {
+        transform: rotateY(-25deg);
+    }
+    50% {
+        translate: 0 0 10px;
+        transform: rotateY(0deg);
+    }
+    75%{
+        transform: rotateY(25deg);
+    }
+    100% {
+        translate: 0 0 3px;
+        transform: rotateY(0deg);
+    }
+}
+
+
+@keyframes swing {
+    0% {
+        transform: rotateY(0deg);
+    } 
+    25% {
+        transform: rotateY(45deg);
+    }
+    50% {
+        transform: rotateY(0deg);
+    }
+    75%{
+        transform: rotateY(-45deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes swing-rev {
+    0% {
+        transform: rotateY(0deg);
+    } 
+    25% {
+        transform: rotateY(-45deg);
+    }
+    50% {
+        transform: rotateY(0deg);
+    }
+    75%{
+        transform: rotateY(45deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}

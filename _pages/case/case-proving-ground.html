@@ -1,0 +1,87 @@
+---
+layout: l-proving-ground
+title: Proving Grounds
+permalink: /case/proving-ground
+---
+
+<article class="vs-c-wrapper">
+    <h1>PROVING GROUNDS</h1>
+
+    <section class="pg-l-section">
+        <div class="pg-toggle-wrapper">
+            <input type="checkbox" id="toggle-view">
+            <label for="toggle-view">toggle View</label>  
+        </div>
+        <!-- 
+        Scene
+        This div is the main scene. Think of it as the world 
+        where your characters, elements will move and iteract      
+        -->
+        <div class="pg-scene tst-scene-01">
+            <!-- inner scene shell sides -->
+            <div class="side side-f">front</div>
+            <div class="side side-l">left</div>
+            <div class="side side-r">right</div>
+            <div class="side side-b">back</div>
+            <div class="side side-t">top</div>
+            
+            <div class="pg-scene__wrapper vs-l-grid vs-l-grid__board">
+                <!-- board cells -->
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+                <div class="pg-vox"></div>
+
+                <!-- path visualizer -->
+                <svg class="test-path-01">
+                    <path d="M 30 180 L 30 60 Q 30 30 60 30 L 180 30 Q 210 30 210 60 L 210 180 Q 210 210 180 210 Q 120 210 60 210 Q 30 210 30 180 Z"></path>
+                </svg>
+
+                <!-- moving object -->
+                <div class="pg-block kyubi-block">
+                    <div class="pg-block__inner kyubi">
+
+                        <div class="pg-c kyubi__head"><div></div></div>
+                        <div class="pg-c kyubi__ear kyubi__ear-left"><div></div></div>
+                        <div class="pg-c kyubi__ear kyubi__ear-right "><div></div></div>
+                        <div class="pg-c kyubi__eye kyubi__eye-left"><div></div></div>
+                        <div class="pg-c kyubi__eye kyubi__eye-right "><div></div></div>
+                        <div class="pg-c kyubi__mouth"><div></div></div>
+                        <div class="pg-c kyubi__nose"><div></div></div>
+                        <div class="pg-c kyubi__body"><div></div></div>
+                        <div class="pg-c kyubi__body-02"><div></div></div>
+                        <div class="pg-c kyubi__tail-01"><div></div></div>
+                        <div class="pg-c kyubi__tail-02"><div></div></div>
+                        <div class="pg-c kyubi__body-03"><div></div></div>
+                        <div class="pg-c kyubi__chest"><div></div></div>
+                        <div class="pg-c kyubi__feet kyubi__feet-fl"><div></div></div>
+                        <div class="pg-c kyubi__feet kyubi__feet-fr"><div></div></div>
+                        <div class="pg-c kyubi__feet kyubi__feet-bl"><div></div></div>
+                        <div class="pg-c kyubi__feet kyubi__feet-br"><div></div></div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="pg-l-section">
+        <div class="pg-scene tst-scene-02">
+            <div class="pg-vox"></div>
+        </div>
+    </section>
+
+</article>

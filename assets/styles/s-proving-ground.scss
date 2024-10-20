@@ -1,0 +1,407 @@
+---
+---
+/* Base
+--------------------------------------------------------------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, Helvetica, sans-serif, Consolas, "Courier New", "Droid Sans Mono", monospace;
+    font-size: 1rem;
+    background-color: #0B161D;
+    color: #F8F8F8;
+
+    --header-height: 3em;
+}
+
+body, 
+body * {
+    box-sizing: border-box;
+}
+
+/* Header
+---------------------------------------------------------------------------------*/
+.vs-l-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #0B161D;
+    box-shadow: 1px -11px 20px black;
+    z-index: 99;
+}
+
+.vs-l-header__wrapper {
+    height: var(--header-height);
+    width: 55vw; 
+    margin: 0 auto;
+    align-content: center;
+}
+
+.vs-u-link {
+    padding: 3px;
+    border-radius: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    line-height: 1;
+    background-color: #ffffff;
+    color: black;
+    transition: 0.2s;
+}
+
+.vs-u-link:hover{
+    filter: opacity(0.5);
+}
+
+/* Layout
+--------------------------------------------------------------------------------*/
+
+.vs-l-main {
+    min-height: calc(100vh - var(--header-height));
+}
+
+.vs-l-grid {
+    display: grid;
+}
+
+.vs-l-grid__board {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.vs-c-wrapper {
+    margin: 0 auto;
+    width: 55vw; 
+    min-width: 360px;
+    max-width: 960px;
+}
+
+.pg-l-section {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 800px;
+    background-color: #ffffff;
+}
+
+.pg-toggle-wrapper{
+    position: absolute;
+    top: calc(50% + 250px);
+    left: 50%;
+    padding: 1em 1.3em;
+    border-radius: 10px;
+    border:#3f3e3e;
+    background-color: greenyellow;
+    translate: -50% -50%;
+    color: black;
+    cursor:pointer;
+  }
+
+/* Rig
+---------------------------------------------------------------------------------*/
+
+.pg-scene {
+    --border: 3px;
+    --sc-border: var(--border) solid red;
+    --base-size: 12px;
+    --sc-dim: 300px; // scene dimension
+
+    font-size: var(--base-size);
+    width: var(--sc-dim); height: var(--sc-dim);
+    border: var(--sc-border);
+    transform-style: preserve-3d;
+}
+.pg-scene__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+}
+
+.pg-vox {
+    width: 100%; height: 100%;
+    border: 1px solid blue;
+}
+
+/* Control
+--------------------------------------------------------------------------------*/
+
+.pg-toggle-wrapper:has(input:checked) + div {
+    transform: rotateX(0deg) rotateZ(0deg);
+}
+
+/* Cube
+---------------------------------------------------------------------------------*/
+.pg-block {
+    --kb-c-00: #3f3e3e;
+    --kb-c-01: #ce8b55;
+    --kb-c-02: #e2dfd8;
+    --kb-c-03: #dabaa8;
+    --bg-color: #0B161D;
+    --white: #fff;
+}
+
+.pg-c,
+.pg-c::before,
+.pg-c::after,
+.pg-c div,
+.pg-c div::before,
+.pg-c div::after
+ {
+    content: '';
+    position: absolute;
+    display: block;
+    transform-style: preserve-3d;
+}
+
+.pg-c {
+    /*  width       depth       height */
+    --x: 20px; --y: 20px; --z: 20px;
+    width: var(--x); height: var(--y);
+    --color: var(--kb-c-01);
+    background-color: color-mix(in display-p3, var(--color) 50%, var(--bg-color) );
+
+}
+
+.pg-c::after {
+    width: var(--x); height: var(--z); 
+    background-color: color-mix(in display-p3, var(--color) 90%, var(--bg-color) );
+    transform-origin: 0px var(--z) 0px;
+    rotate: x 270deg;
+    translate: 0px calc(var(--y) - var(--z));
+}
+
+.pg-c::before{
+    width: var(--x); height: var(--z); 
+    background-color: color-mix(in display-p3, var(--color) 70%, var(--bg-color) );
+    transform-origin: 0px 0px 0px;
+    rotate: x -270deg;
+}
+
+.pg-c > div {
+    width: var(--x); height: var(--y);
+    background-color: var(--color);
+    translate: 0 0 var(--z);
+}
+
+.pg-c > div::before {
+    width: var(--z); height: var(--y);
+    background-color: color-mix(in display-p3, var(--color) 80%, var(--bg-color) );
+    transform-origin: 0px 0px 0px;
+    rotate: y -270deg;
+}
+
+.pg-c > div::after {
+    width: var(--z); height: var(--y);
+    background-color: color-mix(in display-p3, var(--color) 80%, var(--bg-color) );
+    transform-origin: var(--z) 0;
+    rotate: y 270deg;
+    translate: calc(var(--x) - var(--z)) 0px;
+}
+
+/* Content
+---------------------------------------------------------------------------------*/
+
+
+/* scene 01
+------------------------------------------------*/
+.tst-scene-01{
+    --base-size: 24px;
+    --sc-dim: 10em; // scene dimension
+    --border: 0px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    --origin-center: calc(var(--sc-dim) / 2);
+
+    transform-origin: var(--origin-center) var(--origin-center) var(--origin-center);
+    transform: rotateX(65deg) rotateZ(49deg);
+    transition: 1s;
+
+}
+
+.side {
+    --side-val: calc(var(--sc-dim) - (var(--border) * 2));
+    position: absolute;
+    width: var(--side-val);
+    height: var(--side-val);
+    color: black;
+    border: 1px solid black;
+    opacity: 0.0;
+    display: none;
+}
+
+.side-f { 
+    background-color: blue;
+    transform-origin: bottom;
+    transform: rotateX(-90deg);
+}
+.side-b { 
+    background-color: white;   
+    transform-origin: top;
+    transform: rotateX(90deg);
+    translate: 0 0;
+}
+.side-l { 
+    background-color: green; 
+    transform: rotateZ(90deg) rotateX(-90deg);
+    translate: calc(-1*(var(--side-val) / 2)) 0px calc(var(--side-val) / 2);
+}
+.side-r { 
+    background-color: yellow; 
+    transform: rotateZ(-90deg) rotateX(-90deg);
+    translate: calc(var(--side-val) / 2) 0px calc(var(--side-val) / 2);
+}
+.side-t { 
+    background-color: pink;
+    translate: 0 0 var(--side-val);
+}
+
+.test-path-01 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.test-path-01 path{
+    fill: none;    
+    stroke: red;
+    stroke-width: 5px;
+}
+
+.pg-c.kyubi__head {
+    translate: 10px 2px 14px;
+    --x: 10px;
+    --z: 6px;
+    --y: 16px;
+} 
+
+.pg-c.kyubi__ear {
+    --x: 3px;
+    --y: 3px;
+    --z: 3px;
+}
+
+.pg-c.kyubi__ear.kyubi__ear-left{
+    translate: 10px 15px 20px;
+}
+
+.pg-c.kyubi__ear.kyubi__ear-right{
+    translate: 10px 2px 20px;
+}
+
+.pg-c.kyubi__body {
+    translate: 10px -2px 10px;
+    --x: 10px;
+    --y: 24px;
+    --z: 4px;
+}
+
+.pg-c.kyubi__body-02 {
+    --x: 12px;
+    --y: 24px;
+    --z: 14px;
+    translate: -2px -2px 0px;
+}
+
+.pg-c.kyubi__tail-01 {
+    --x: 6px;
+    --y: 16px;
+    --z: 10px;
+    translate: -8px 2px 4px;
+    --color: var(--kb-c-03);
+}
+
+.pg-c.kyubi__tail-02 {
+    --x: 11px;
+    --y: 16px;
+    --z: 4px;
+    translate: -8px 2px 14px;
+    --color: var(--kb-c-03);
+}
+
+.pg-c.kyubi__body-03 {
+    translate: 10px -2px 0px;
+    --x: 10px;
+    --y: 24px;
+    --z: 10px;
+    --color: var(--kb-c-02);
+}
+
+.pg-c.kyubi__chest {
+    translate: 4px 2px -3px;
+    --x: 14px;
+    --y: 16px;
+    --z: 3px;
+    --color: var(--kb-c-02);
+}
+
+.pg-c.kyubi__feet {
+    --x: 3px;
+    --y: 3px;
+    --z: 7px;
+    transform-origin: 50% 50% 5px;
+}
+
+.pg-c.kyubi__feet.kyubi__feet-fl {
+    translate: 15px 17px -5px;
+}
+
+.pg-c.kyubi__feet.kyubi__feet-fr {
+    translate: 15px 0px -5px;
+}
+
+.pg-c.kyubi__feet.kyubi__feet-bl {
+    translate: 4px 17px -5px;
+}
+
+.pg-c.kyubi__feet.kyubi__feet-br {
+    translate: 4px 0px -5px;
+}
+
+.pg-c.kyubi__mouth {
+    translate: 20px 4px 8px;
+    --x: 3px;
+    --y: 12px;
+    --z: 6px;
+    --color: var(--kb-c-02);
+}
+
+.pg-c.kyubi__eye {
+    --x: 1px;
+    --y: 3px;
+    --z: 2px;
+    --color: var(--kb-c-00);
+}
+
+.pg-c.kyubi__eye.kyubi__eye-left{
+    translate: 20px 13px 14px;
+}
+
+.pg-c.kyubi__eye.kyubi__eye-right{
+    translate: 20px 4px 14px;
+}
+
+.pg-c.kyubi__nose {
+    translate: 23px 7px 11px;
+    --x: 1px;
+    --y: 6px;
+    --z: 3px;
+    --color: var(--kb-c-00);
+}
+
+
+/* scene 02
+------------------------------------------------*/
+.tst-scene-02{
+    --base-size: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
