@@ -145,9 +145,10 @@ body * {
 .pg-c,
 .pg-c::before,
 .pg-c::after,
-.pg-c div,
-.pg-c div::before,
-.pg-c div::after
+.pg-c > div,
+.pg-c > div::before,
+.pg-c > div::after,
+.pg-c div
  {
     content: '';
     position: absolute;
@@ -317,7 +318,7 @@ body * {
 }
 
 .pg-c.kyubi__tail-02 {
-    --x: 11px;
+    --x: 6px;
     --y: 16px;
     --z: 4px;
     translate: -8px 2px 14px;
@@ -392,6 +393,192 @@ body * {
     --y: 6px;
     --z: 3px;
     --color: var(--kb-c-00);
+}
+
+.pg-c.kyubi__saddle-01 {
+    --x: 10px;
+    --y: 16px;
+    --z: 1px;
+    translate: -2px 2px 14px;
+    --color: #3f3f3f;
+}
+
+// boy
+.pg-block.boy-block{
+    translate: 3px 12px 0px;
+}
+
+.pg-c.boy__body {
+    --x: 4px;
+    --y: 4px;
+    --z: 3px;
+    translate: 0px 0px 2px;
+    --color: deepskyblue;
+}
+
+.pg-c.boy__arm-01 {
+    --x: 1px;
+    --y: 1px;
+    --z: 4px;
+    translate: 1px 4px 1px;
+    transform-origin: 0 0 3px;
+    transform: rotateY(-55deg);
+    --color: deepskyblue;
+}
+
+.pg-c.boy__arm-02 {
+    --x: 1px;
+    --y: 1px;
+    --z: 4px;
+    translate: 1px -1px 1px;
+    transform-origin: 0 0 3px;
+    transform: rotateX(-80deg);
+    --color: deepskyblue;
+}
+
+.pg-c.boy__hand {
+    --x: 1px;
+    --y: 1px;
+    --z: 1px;
+    translate: 0px 0px -5px;
+    --color: burlywood;
+}
+
+.pg-c.boy__head {
+    --x: 4px;
+    --y: 6px;
+    --z: 3px;
+    translate: 0px -1px 5px;
+    --color: burlywood;
+}
+
+.pg-c.boy__hair-01 {
+    --x: 4px;
+    --y: 6px;
+    --z: 1px;
+    translate: 0px -1px 8px;
+    --color: black;
+}
+
+.pg-c.boy__hair-02 {
+    --x: 1px;
+    --y: 6px;
+    --z: 4px;
+    translate: -1px -1px 5px;
+    --color: black;
+}
+
+.pg-c.boy__waist {
+    --x: 4px;
+    --y: 4px;
+    --z: 2px;
+    translate: 0px 0px 0px;
+    --color: steelblue;
+}
+
+.pg-c.boy__leg-01 {
+    --x: 2px;
+    --y: 1px;
+    --z: 1px;
+    translate: 4px 0px 0px;
+    --color: steelblue;
+}
+
+.pg-c.boy__leg-02 {
+    --x: 2px;
+    --y: 1px;
+    --z: 1px;
+    translate: 4px 3px 0px;
+    --color: steelblue;
+}
+
+// girl
+.pg-block.girl-block{
+    translate: 3px 0px 0px;
+}
+
+.pg-c.girl__body {
+    --x: 4px;
+    --y: 4px;
+    --z: 3px;
+    translate: 0px 0px 2px;
+    --color: lightpink;
+}
+
+.pg-c.girl__arm-01 {
+    --x: 1px;
+    --y: 1px;
+    --z: 4px;
+    translate: 1px 4px 1px;
+    transform-origin: 0 0 3px;
+    transform: rotateX(60deg);
+    --color: lightpink;
+}
+
+.pg-c.girl__arm-02 {
+    --x: 1px;
+    --y: 1px;
+    --z: 4px;
+    translate: 1px -1px 1px;
+    transform-origin: 0 0 3px;
+    transform: rotateY(-55deg);
+    --color: lightpink;
+}
+
+.pg-c.girl__hand {
+    --x: 1px;
+    --y: 1px;
+    --z: 1px;
+    translate: 0px 0px -5px;
+    --color: bisque;
+}
+
+.pg-c.girl__head {
+    --x: 4px;
+    --y: 6px;
+    --z: 3px;
+    translate: 0px -1px 5px;
+    --color: bisque;
+}
+
+.pg-c.girl__hair-01 {
+    --x: 4px;
+    --y: 6px;
+    --z: 1px;
+    translate: 0px -1px 8px;
+    --color: black;
+}
+
+.pg-c.girl__hair-02 {
+    --x: 1px;
+    --y: 6px;
+    --z: 6px;
+    translate: -1px -1px 2px;
+    --color: black;
+}
+
+.pg-c.girl__waist {
+    --x: 4px;
+    --y: 4px;
+    --z: 2px;
+    translate: 0px 0px 0px;
+    --color: salmon;
+}
+
+.pg-c.girl__leg-01 {
+    --x: 2px;
+    --y: 1px;
+    --z: 1px;
+    translate: 4px 0px 0px;
+    --color: salmon;
+}
+
+.pg-c.girl__leg-02 {
+    --x: 2px;
+    --y: 1px;
+    --z: 1px;
+    translate: 4px 3px 0px;
+    --color: salmon;
 }
 
 
