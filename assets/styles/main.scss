@@ -125,7 +125,7 @@ ul {
 }
 
 .mp-w-l {
-  max-width: 50em;
+  max-width: 60em;
 }
 
 .card-list {
@@ -945,7 +945,7 @@ two-up {
 ------------------------------------------------------------*/
 
 .fps {
-  font-size: clamp(30px, 10vw, 60px);
+  font-size: clamp(30px, 10vw, 80px);
   --x: 3em;
   --color: transparent; // border color
   --origin: calc(var(--x) / 2);
