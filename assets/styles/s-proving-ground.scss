@@ -32,8 +32,6 @@ body * {
 
 .vs-l-header__wrapper {
     height: var(--header-height);
-    width: 55vw; 
-    margin: 0 auto;
     align-content: center;
 }
 
@@ -86,7 +84,7 @@ body * {
 
 .pg-toggle-wrapper{
     position: absolute;
-    top: calc(50% + 250px);
+    bottom: 0px;
     left: 50%;
     padding: 1em 1.3em;
     border-radius: 10px;
@@ -134,12 +132,9 @@ body * {
 /* Cube
 ---------------------------------------------------------------------------------*/
 .pg-block {
-    --kb-c-00: #3f3e3e;
-    --kb-c-01: #ce8b55;
-    --kb-c-02: #e2dfd8;
-    --kb-c-03: #dabaa8;
     --bg-color: #0B161D;
     --white: #fff;
+    transform-style: preserve-3d;
 }
 
 .pg-c,
@@ -160,7 +155,7 @@ body * {
     /*  width       depth       height */
     --x: 20px; --y: 20px; --z: 20px;
     width: var(--x); height: var(--y);
-    --color: var(--kb-c-01);
+    --color: var(--white);
     background-color: color-mix(in display-p3, var(--color) 50%, var(--bg-color) );
 
 }
@@ -207,6 +202,10 @@ body * {
 
 /* scene 01
 ------------------------------------------------*/
+.section-scene-01 {
+   overflow-x: hidden;
+}
+
 .tst-scene-01{
     --base-size: 24px;
     --sc-dim: 10em; // scene dimension
@@ -220,7 +219,7 @@ body * {
     --origin-center: calc(var(--sc-dim) / 2);
 
     transform-origin: var(--origin-center) var(--origin-center) var(--origin-center);
-    transform: rotateX(65deg) rotateZ(49deg);
+    transform: rotateX(65deg) rotateZ(49deg) scale3d(1.5,1.5,1.5);
     transition: 1s;
 
 }
@@ -272,6 +271,18 @@ body * {
     fill: none;    
     stroke: red;
     stroke-width: 5px;
+}
+
+.kyubi-block {
+    --kb-c-00: #3f3e3e;
+    --kb-c-01: #ce8b55;
+    --kb-c-02: #e2dfd8;
+    --kb-c-03: #dabaa8;
+    --color: var(--kb-c-01);
+}
+
+.kyubi .pg-c{
+    --color: var(--kb-c-01);
 }
 
 .pg-c.kyubi__head {
