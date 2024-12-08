@@ -86,10 +86,10 @@ footer {
 .bsk-l-back {
     position: sticky;
     top: 0;
-    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 10px 0;
-    background-color: #f9f0df;
-    
+    background: linear-gradient(to bottom, #f9f0df, transparent);
     z-index: 99;
 }
 
@@ -102,6 +102,9 @@ footer {
     background-color: #f9f0df;
     padding: 0 10px 10px;
     z-index: 99;
+    max-width: 900px;
+    left: 50%;
+    translate: -50% 0%;
 }
 
 .bsk-u-backlink {
