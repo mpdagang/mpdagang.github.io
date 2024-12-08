@@ -973,6 +973,7 @@ two-up {
   --x: 3em;
   --color: transparent; // border color
   --origin: calc(var(--x) / 2);
+  --fps-time: 1.5s;
 }
 
 .fps {
