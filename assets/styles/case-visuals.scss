@@ -67,7 +67,8 @@ body {
 .vs-l-header__wrapper {
     margin: 0 auto;
     padding: 20px 0;
-    width: 55vw; 
+    width: 55vw;
+    min-width: 400px;
 }
 
 .vs-u-link {
