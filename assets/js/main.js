@@ -56,4 +56,9 @@ document.addEventListener("DOMContentLoaded", function() {
             pnrDel.classList.remove("pnr-move");
         });
     }
+
+    let fpsCover = document.getElementById("fps-cover");
+    if(fpsCover != null){
+        fpsCover.classList.add("ready-fps");
+    }
 });
