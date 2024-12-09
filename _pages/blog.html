@@ -10,11 +10,13 @@ permalink: /blog/
   <br> 
     <div class="card-list">
       {% for post in site.posts %}
-        <div class="card-item blog-card">
-          <h3 class="blog-card-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        {% if post.category != "notes" and post.category != "demos" %}
+        <a href="{{ post.url }}" class="card-item blog-card"> 
+          <h3 class="blog-card-title">{{ post.title }}</h3>
           {{ post.excerpt }}
           <div class="blog-card-date">{{ post.date | date: "%b %-d, %Y" }}</div>
-        </div>
+        </a>
+        {% endif %}
       {% endfor %}
     </div>
 
