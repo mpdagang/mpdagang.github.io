@@ -473,6 +473,20 @@ footer {
   text-decoration: underline;
 }
 
+.p-portfolio__skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5vw;
+  list-style: none;
+}
+
+
+.p-portfolio__skill-list li{
+  padding: 0 0.5em;
+  border-radius: 0.7em;
+  background-color: var(--mp-c-lua-08);
+}
+
 /*-- Readings*/
 
 .p-rdg-content {
