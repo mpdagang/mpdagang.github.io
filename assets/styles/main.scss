@@ -74,6 +74,10 @@ ul {
   margin-left: 1em;
 }
 
+summary {
+  cursor: pointer;
+}
+
 .mp-c-lua-02 {
   color: var(--mp-c-lua-02);
 }
