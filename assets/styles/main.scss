@@ -178,7 +178,7 @@ summary {
 }
 
 .mp-l-pancake-item {
-  flex: 1 1 300px; /*  Stretching: */
+  flex: 1 1 150px; /*  Stretching: */
   margin: 5px;
 }
 
@@ -567,6 +567,12 @@ footer {
 .b-link {
   color: var(--mp-c-lua-06);
   text-decoration: underline;
+}
+
+/*-- Blogroll*/
+
+.b-roll-wrapper a p {
+  font-size: 0.5em;
 }
 
 
@@ -1105,25 +1111,19 @@ two-up {
 
 .fps-wrapper.ready-fps .fps .fps-s__r{
   transition: 0.3s;
-  transition-delay: var(--fps-time);
   translate: calc(var(--x) + 0.1em) 0 0;
 }
 
 .fps-wrapper.ready-fps .fps .fps-s__b{
   transition: 0.3s;
-  transition-delay: var(--fps-time);
   translate: 0 -0.1em 0;
 }
 
 .fps-wrapper.ready-fps .fps .fps-s__t{
   transition: 0.3s;
-  transition-delay: var(--fps-time);
   translate: 0 0 calc(var(--x) + 0.1em);
 }
 
-.fps:active {
-  transform: rotatex(60deg) rotatez(135deg) scale3d(1.17, 1.17, 1.17);
-}
 
 .fps-wrapper.ready-fps .fps:active .fps-s__r{
   transition-delay: 0s;
