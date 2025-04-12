@@ -11,17 +11,18 @@ html {
 }
 
 body {
-  font-family: "Trebuchet MS", sans-serif, "Arial";
+  font-family: Tahoma, Arial, system-ui;
   font-size: 1rem;
-  letter-spacing: 0.003em;
-  line-height: 1.5;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
   background-color: #0B161D;
-  color: #F8F8F8;
+  // color: #F8F8F8;
+  color: #cccccc;
 }
 
 body {
   --mp-c-bg: #0B161D;
-  --mp-c-fg: #F8F8F8;
+  --mp-c-fg: #cccccc;
   --mp-c-lua-00: #C5DFE980;
   --mp-c-lua-01: #ffaa00;
   --mp-c-lua-02: #60f0f0;
@@ -46,6 +47,11 @@ body {
   --mp-f-01: 1.1em;
 
   --mp-f-xl: 2em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Trebuchet MS", sans-serif, "Arial", system-ui;
+  letter-spacing: 0.05rem;
 }
 
 .mp-f-xl {
@@ -200,7 +206,7 @@ summary {
 -----------------------------------------*/
 
 .card-item {
-  padding: 10px;
+  padding: 0 15px;
   border: 1px solid #ffffff;
   border-radius: 8px;;
   transition: 0.3s;
