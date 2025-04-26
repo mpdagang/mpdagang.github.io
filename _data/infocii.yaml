@@ -1,0 +1,26 @@
+- name: CSS In Real Life
+  site: https://css-irl.info/
+
+- name: CSS Tricks
+  site: https://css-tricks.com/
+
+- name: Smashing Magazine
+  site: https://www.smashingmagazine.com/
+
+- name: Front-end Masters
+  site: https://frontendmasters.com/blog/
+
+- name: Piccalilli
+  site: https://piccalil.li/
+
+- name: Web.dev
+  site: https://web.dev/blog
+
+- name: Chrome Dev
+  site: https://developer.chrome.com/blog
+
+- name: Codepen
+  site: https://blog.codepen.io/
+
+- name: HTML & CSS Tip of the Week
+  site: https://html-css-tip-of-the-week.netlify.app/
