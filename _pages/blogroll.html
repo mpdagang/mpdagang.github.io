@@ -5,312 +5,57 @@ permalink: /blogroll/
 ---
 
 <article class="mp-con mp-w-l">
-  <h1>Blogroll Cafe</h1>
-  <p>My frequented blogs for bleeding edge and exploratory web dev techniques.</p>
+  <header>
+    <h1>Blogroll Cafe</h1>
+    <p>My frequented blogs for bleeding edge and exploratory web dev techniques.</p>
+  </header>
+
   <section>
     <h2>Web Masters</h2>
     <div class="mp-l-pancake b-roll-wrapper">
-        <a href="https://adactio.com/" class="mp-l-pancake-item blog-card">
-            <h4>Jeremy Keith</h4>
-            <p>https://adactio.com/</p>
+        {% for webmaster in site.data.webmasters %}
+        <a target="_blank" href="{{ webmaster.site }}" class="mp-l-pancake-item blog-card">
+            <h4>{{ webmaster.name }}</h4>
+            <p>{{ webmaster.site }}</p>
         </a>
-        <a href="https://bradfrost.com/" class="mp-l-pancake-item blog-card">
-            <h4>Brad Frost</h4>
-            <p>https://bradfrost.com/</p>
-        </a>
-        <a href="https://chriscoyier.net/" class="mp-l-pancake-item blog-card">
-            <h4>Chris Coyier</h4>
-            <p>https://chriscoyier.net/</p>
-        </a>
-        <a href="https://www.joshwcomeau.com/" class="mp-l-pancake-item blog-card">
-            <h4>Josh Comeau</h4>
-            <p>https://www.joshwcomeau.com/</p>
-        </a>
-        <a href="https://miocene.io/" class="mp-l-pancake-item blog-card">
-            <h4>Julia Miocene</h4>
-            <p>https://miocene.io/</p>
-        </a>
-        <a href="https://www.bram.us/" class="mp-l-pancake-item blog-card">
-            <h4>Bramus Van Damme</h4>
-            <p>https://www.bram.us/</p>
-        </a>
-        <a href="https://nerdy.dev/" class="mp-l-pancake-item blog-card">
-            <h4>Adam Argyle</h4>
-            <p>https://nerdy.dev/</p>
-        </a>
-        <a href="https://una.im/" class="mp-l-pancake-item blog-card">
-            <h4>Una Kravets</h4>
-            <p>https://una.im/</p>
-        </a>
-        <a href="https://jakelazaroff.com/" class="mp-l-pancake-item blog-card">
-            <h4>Jake Lazaroff</h4>
-            <p>https://jakelazaroff.com/</p>
-        </a>
-        <a href="https://meyerweb.com/" class="mp-l-pancake-item blog-card">
-            <h4>Eric Meyer</h4>
-            <p>https://meyerweb.com/</p>
-        </a>
-        <a href="https://nolanlawson.com/" class="mp-l-pancake-item blog-card">
-            <h4>Nolan Lawson</h4>
-            <p>https://nolanlawson.com/</p>
-        </a>
-        <a href="https://www.zachleat.com/" class="mp-l-pancake-item blog-card">
-            <h4>Zach Leatherman</h4>
-            <p>https://www.zachleat.com/</p>
-        </a>
-        <a href="https://lea.verou.me/" class="mp-l-pancake-item blog-card">
-            <h4>Lea Verou</h4>
-            <p>https://lea.verou.me/</p>
-        </a>
-        <a href="https://robinrendle.com/" class="mp-l-pancake-item blog-card">
-            <h4>Robin Rendle</h4>
-            <p>https://robinrendle.com/</p>
-        </a>
-        <a href="https://interconnected.org/home/" class="mp-l-pancake-item blog-card">
-            <h4>Matt Webb</h4>
-            <p>https://interconnected.org</p>
-        </a>
-        <a href="https://blog.jim-nielsen.com/" class="mp-l-pancake-item blog-card">
-            <h4>Jim Nielsen</h4>
-            <p>https://blog.jim-nielsen.com/</p>
-        </a>
-        <a href="https://michellebarker.co.uk/" class="mp-l-pancake-item blog-card">
-            <h4>Michelle Barker</h4>
-            <p>https://michellebarker.co.uk/</p>
-        </a>
-        <a href="https://alexwlchan.net/" class="mp-l-pancake-item blog-card">
-            <h4>Alex Chan</h4>
-            <p>https://alexwlchan.net/</p>
-        </a>
-        <a href="https://daverupert.com/" class="mp-l-pancake-item blog-card">
-            <h4>Dave Rupert</h4>
-            <p>https://daverupert.com/</p>
-        </a>
-        <a href="https://www.trysmudford.com/" class="mp-l-pancake-item blog-card">
-            <h4>Trys Mudford</h4>
-            <p>https://www.trysmudford.com/</p>
-        </a>
-        <a href="https://chriskirknielsen.com/" class="mp-l-pancake-item blog-card">
-            <h4>Chris Kirk Nielsen</h4>
-            <p>https://chriskirknielsen.com/</p>
-        </a>
-        <a href="https://gomakethings.com/" class="mp-l-pancake-item blog-card">
-            <h4>Chris Ferdinandi</h4>
-            <p>https://gomakethings.com/</p>
-        </a>
-        <a href="https://clagnut.com/blog" class="mp-l-pancake-item blog-card">
-            <h4>Richard Rutter</h4>
-            <p>https://clagnut.com/blog</p>
-        </a>
-        <a href="https://www.keithcirkel.co.uk" class="mp-l-pancake-item blog-card">
-            <h4>Keith Cirkel</h4>
-            <p>https://www.keithcirkel.co.uk</p>
-        </a>
-        <a href="https://hidde.blog" class="mp-l-pancake-item blog-card">
-            <h4>Hidde de Vries</h4>
-            <p>https://hidde.blog</p>
-        </a>
-        <a href="https://estelle.github.io/" class="mp-l-pancake-item blog-card">
-            <h4>Estelle Weyl</h4>
-            <p>https://estelle.github.io/</p>
-        </a>
-        <a href="https://holasvg.com/" class="mp-l-pancake-item blog-card">
-            <h4>Mariana Beldi</h4>
-            <p>https://holasvg.com/</p>
-        </a>
-        <a href="https://herman.bearblog.dev/" class="mp-l-pancake-item blog-card">
-            <h4>Herman Martinus</h4>
-            <p>https://herman.bearblog.dev/</p>
-        </a>
-        <a href="https://keithjgrant.com/" class="mp-l-pancake-item blog-card">
-            <h4>Keith Grant</h4>
-            <p>https://keithjgrant.com/</p>
-        </a>
-        <a href="https://scottjehl.com/posts/" class="mp-l-pancake-item blog-card">
-            <h4>Scott Jehl</h4>
-            <p>https://scottjehl.com</p>
-        </a>
-        <a href="https://alvaromontoro.com/" class="mp-l-pancake-item blog-card">
-            <h4>Alvaro Montoro</h4>
-            <p>https://alvaromontoro.com/</p>
-        </a>
-        <a href="https://ryantrimble.com/" class="mp-l-pancake-item blog-card">
-            <h4>Ryan Trimble</h4>
-            <p>https://ryantrimble.com/</p>
-        </a>
-        <a href="https://darn.es/" class="mp-l-pancake-item blog-card">
-            <h4>David Darnes</h4>
-            <p>https://darn.es/</p>
-        </a>
-        <a href="https://paulrobertlloyd.com/articles/" class="mp-l-pancake-item blog-card">
-            <h4>Paul Robert Lloyd</h4>
-            <p>https://paulrobertlloyd.com</p>
-        </a>
-        <a href="https://jayhoffmann.com/" class="mp-l-pancake-item blog-card">
-            <h4>Jay Hoffmann</h4>
-            <p>https://jayhoffmann.com/</p>
-        </a>
-        <a href="https://ohhelloana.blog/" class="mp-l-pancake-item blog-card">
-            <h4>Ana Rodrigues</h4>
-            <p>https://ohhelloana.blog/</p>
-        </a>
-        <a href="https://kevquirk.com/" class="mp-l-pancake-item blog-card">
-            <h4>Kev Quirk</h4>
-            <p>https://kevquirk.com/</p>
-        </a>
-        <a href="https://adrianroselli.com" class="mp-l-pancake-item blog-card">
-            <h4>Adrian Roselli</h4>
-            <p>https://adrianroselli.com</p>
-        </a>
-        <a href="https://www.gilesthomas.com/" class="mp-l-pancake-item blog-card">
-            <h4>Giles Thomas</h4>
-            <p>https://www.gilesthomas.com/</p>
-        </a>
-        <a href="https://remysharp.com" class="mp-l-pancake-item blog-card">
-            <h4>Remy Sharp</h4>
-            <p>https://remysharp.com</p>
-        </a>
-        <a href="https://sheep.horse" class="mp-l-pancake-item blog-card">
-            <h4>Andrew Stephens</h4>
-            <p>https://sheep.horse</p>
-        </a>
-        <a href="https://cassidoo.co/blog/" class="mp-l-pancake-item blog-card">
-            <h4>Cassidy Williams</h4>
-            <p>https://cassidoo.co</p>
-        </a>
-        <a href="https://chenhuijing.com" class="mp-l-pancake-item blog-card">
-            <h4>Chen Hui Jing</h4>
-            <p>https://chenhuijing.com</p>
-        </a>
-        <a href="https://dbushell.com/" class="mp-l-pancake-item blog-card">
-            <h4>David Bushell</h4>
-            <p>https://dbushell.com/</p>
-        </a>
-        <!-- <a href="" class="mp-l-pancake-item blog-card">https://ohhelloana.blog/
-            <h4></h4>
-            <p></p>
-        </a> -->
+        {% endfor %}
     </div>
   </section>
+
   <section>
     <h2>Insight/Introspection</h2>
     <div class="mp-l-pancake b-roll-wrapper">
-        <a href="https://www.citationneeded.news/" class="mp-l-pancake-item blog-card">
-            <h4>Molly White</h4>
-            <p>https://www.citationneeded.news/</p>
+        {% for introspect in site.data.introspects %}
+        <a target="_blank" href="{{ introspect.site }}" class="mp-l-pancake-item blog-card">
+            <h4>{{ introspect.name }}</h4>
+            <p>{{ introspect.site }}</p>
         </a>
-        <a href="https://infrequently.org/" class="mp-l-pancake-item blog-card">
-            <h4>Alex Russell</h4>
-            <p>https://infrequently.org/</p>
-        </a>
-        <a href="https://pluralistic.net/" class="mp-l-pancake-item blog-card">
-            <h4>Cory Doctorow</h4>
-            <p>https://pluralistic.net/</p>
-        </a>
-        <a href="https://www.baldurbjarnason.com/" class="mp-l-pancake-item blog-card">
-            <h4>Baldur Bjarnason</h4>
-            <p>https://www.baldurbjarnason.com/</p>
-        </a>
-        <a href="https://jamesbridle.com/" class="mp-l-pancake-item blog-card">
-            <h4>James Bridle</h4>
-            <p>https://jamesbridle.com/</p>
-        </a>
-        <a href="https://thehistoryoftheweb.com/" class="mp-l-pancake-item blog-card">
-            <h4>History of the Web</h4>
-            <p>https://thehistoryoftheweb.com/</p>
-        </a>
-        <a href="https://arstechnica.com/" class="mp-l-pancake-item blog-card">
-            <h4>Ars Technica</h4>
-            <p>https://arstechnica.com/</p>
-        </a>
-        <a href="https://technicshistory.com/" class="mp-l-pancake-item blog-card">
-            <h4>Creature of Thought</h4>
-            <p>https://technicshistory.com/</p>
-        </a>
-        <a href="https://ciechanow.ski/" class="mp-l-pancake-item blog-card">
-            <h4>Bartosz Ciechanowski</h4>
-            <p>https://ciechanow.ski/</p>
-        </a>
+        {% endfor %}
     </div>
   </section>
-  <section>
-    <h2>Performant</h2>
-    <div class="mp-l-pancake b-roll-wrapper">
-        <a href="https://medium.com/@tjmonsi" class="mp-l-pancake-item blog-card">
-            <h4>TJ Monserrat</h4>
-        </a>
-        <a href="https://www.usecue.com/blog" class="mp-l-pancake-item blog-card">
-            <h4>Joost van der Schee</h4>
-        </a>
-        <a href="https://www.aleksandrhovhannisyan.com/blog/" class="mp-l-pancake-item blog-card">
-            <h4>Aleksandr Hovhannisyan</h4>
-        </a>
-        <a href="https://simonwillison.net/" class="mp-l-pancake-item blog-card">
-            <h4>Simon Willison</h4>
-            <p>https://simonwillison.net/</p>
-        </a>
-        <a href="https://tantek.com/" class="mp-l-pancake-item blog-card">
-            <h4>Tantek Çelik</h4>
-            <p>https://tantek.com/</p>
-        </a>
-    </div>
-  </section>
+
   <section>
     <h2>PH</h2>
     <div class="mp-l-pancake b-roll-wrapper">
-        <a href="https://leanrada.com" class="mp-l-pancake-item blog-card">
-            <h4>Lean Rada</h4>
-            <p>https://leanrada.com</p>
+        {% for pinoy in site.data.phblog %}
+        <a target="_blank" href="{{ pinoy.site }}" class="mp-l-pancake-item blog-card">
+            <h4>{{ pinoy.name }}</h4>
+            <p>{{ pinoy.site }}</p>
         </a>
-        <a href="https://chisenires.design" class="mp-l-pancake-item blog-card">
-            <h4>Chi Señires</h4>
-            <p>https://chisenires.design</p>
-        </a>
-        <!-- <a href="" class="mp-l-pancake-item blog-card">
-            <h4></h4>
-            <p></p>
-        </a> -->
+        {% endfor %}
     </div>
   </section>
+
   <section>
     <h2>In Focus</h2>
     <div class="mp-l-pancake b-roll-wrapper">
-        <a href="https://css-irl.info/" class="mp-l-pancake-item blog-card">
-            <h4>CSS {In Real Life}</h4>
-            <p>https://css-irl.info/</p>
+        {% for infocus in site.data.infocii %}
+        <a target="_blank" href="{{ infocus.site }}" class="mp-l-pancake-item blog-card">
+            <h4>{{ infocus.name }}</h4>
+            <p>{{ infocus.site }}</p>
         </a>
-        <a href="https://css-tricks.com/category/articles/" class="mp-l-pancake-item blog-card">
-            <h4>CSS Tricks</h4>
-            <p>https://css-tricks.com/</p>
-        </a>
-        <a href="https://www.smashingmagazine.com/" class="mp-l-pancake-item blog-card">
-            <h4>Smashing Magazine</h4>
-            <p>https://www.smashingmagazine.com/</p>
-        </a>
-        <a href="https://frontendmasters.com/blog/" class="mp-l-pancake-item blog-card">
-            <h4>Front-end Masters</h4>
-            <p>https://frontendmasters.com/blog/</p>
-        </a>
-        <a href="https://piccalil.li/" class="mp-l-pancake-item blog-card">
-            <h4>Piccalilli</h4>
-            <p>https://piccalil.li/</p>
-        </a>
-        <a href="https://web.dev/blog" class="mp-l-pancake-item blog-card">
-            <h4>Web.dev</h4>
-            <p>https://web.dev/blog</p>
-        </a>
-        <a href="https://developer.chrome.com/blog" class="mp-l-pancake-item blog-card">
-            <h4>Chrome Dev</h4>
-            <p>https://developer.chrome.com/blog</p>
-        </a>
-        <a href="https://blog.codepen.io/" class="mp-l-pancake-item blog-card">
-            <h4>Codepen</h4>
-            <p>https://blog.codepen.io/</p>
-        </a>
-        <a href="https://html-css-tip-of-the-week.netlify.app/" class="mp-l-pancake-item blog-card">
-            <h4>HTML & CSS Tip of the Week</h4>
-            <p>https://html-css-tip-of-the-week.netlify.app/</p>
-        </a>
+        {% endfor %}
     </div>
   </section>
+
 </article>
