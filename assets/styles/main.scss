@@ -137,11 +137,11 @@ summary {
 }
 
 .mp-w-m {
-  max-width: 40em;
+  max-width: min(40em, 90vw);
 }
 
 .mp-w-l {
-  max-width: 60em;
+  max-width: min(60em, 90vw);
 }
 
 .card-list {
@@ -154,6 +154,18 @@ summary {
 
 .card-item {
     min-height: 50px;
+}
+
+.mp-l-flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.mp-l-flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .mp-l-grid-2 {
@@ -257,7 +269,7 @@ header.masthead {
     display: flex;
     align-content: center;
     list-style: none;
-    gap: 20px;
+    gap: 10px;
     margin: 0;
 }
 
