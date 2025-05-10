@@ -116,6 +116,12 @@ summary {
   color: var(--mp-c-lua-17);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
 /* Layout
 -----------------------------------------*/
 .mp-con {
