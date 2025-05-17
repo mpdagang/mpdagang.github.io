@@ -1,0 +1,48 @@
+---
+---
+
+.sprite {
+    background: url(../img/barry_cherry.png);
+    background-size: 314px 314px;
+    width: 32px;
+    height: 32px;
+    animation: barryAnimation 0.7s steps(5, jump-none) infinite;
+    transform: scale(5);
+    image-rendering: pixelated;
+    transition: 1s;
+}
+
+@keyframes barryAnimation {
+    from {
+        background-position: -8px -33px;
+    }
+    to {
+        background-position: -136px -33px;
+    }
+}
+
+.sprite-2 {
+    background: url(../img/barry_cherry.png);
+    background-size: 628px 628px;
+    width: 64px;
+    height: 64px;
+    animation: barryAnimation2 0.7s steps(5, jump-none) infinite;
+    transform: scale(2.5);
+    image-rendering: pixelated;
+    transition: 1s;
+}
+
+@keyframes barryAnimation2 {
+    from {
+        background-position: -16px -64px;
+    }
+    to {
+        background-position: -272px -64px;
+    }
+}
+
+.sprite-container:hover {
+    .sprite-2, .sprite {
+        transform: scale(1);
+    }
+}
