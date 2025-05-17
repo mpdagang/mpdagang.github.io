@@ -46,3 +46,62 @@
         transform: scale(1);
     }
 }
+
+// use em, base 32px
+.sprite-3 {
+    // --base-size: 32px;
+    --base-size: clamp(24px, 1.4946rem + 0.6522vw, 32px);
+    font-size: var(--base-size);
+    background: url(../img/barry_cherry_3.png);
+    background-size: 20em 20em;
+    width: 2em;
+    height: 2em;
+    animation: barryAnimation3 0.7s steps(5, jump-none) infinite;
+    // transform: scale(2.5);
+    image-rendering: pixelated;
+    transition: 1s;
+    border: 1px solid red;
+}
+
+@keyframes barryAnimation3 {
+    from {
+    background-position: 0em 0em;   
+    }
+    to {
+        background-position: -8em 0em;
+    }
+}
+
+// use em, base 32px
+.sprite-4.walk { --sprite-mode: -3.5em; --sprite-steps: 6; }
+.sprite-4.jump { --sprite-mode: -6.5em; --sprite-steps: 4;}
+.sprite-4.pose { --sprite-mode: -9.5em; --sprite-steps: 8;}
+
+.sprite-4 {
+    // --base-size: 32px;
+    --base-size: clamp(24px, 1.4946rem + 0.6522vw, 32px);
+    --sprite-mode: -0.5em;
+    --sprite-steps: 5;
+    font-size: var(--base-size);
+    background: url(../img/barry_cherry_3.png);
+    background-size: 20em 20em;
+    width: 1.5em; //2em
+    height: 1.5em; //2em
+    animation: barryAnimation4 0.7s steps(var(--sprite-steps), jump-none) infinite;
+    image-rendering: pixelated;
+    transition: 0.3s;
+    // border: 1px solid red;
+}
+
+.sprite-4:hover {
+    transform: scale(1.5);
+}
+ 
+@keyframes barryAnimation4 {
+    from {
+    background-position: -0.3em var(--sprite-mode);   
+    }
+    to {
+        background-position: calc(((2em  * (var(--sprite-steps) - 1)) + 0.3em) * -1) var(--sprite-mode);
+    }
+}
