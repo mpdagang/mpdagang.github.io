@@ -117,7 +117,10 @@
   
 - name: Remy Sharp
   site: https://remysharp.com
-  
+
+- name: Ethan Marcotte
+  site: https://ethanmarcotte.com/
+
 - name: Andrew Stephens
   site: https://sheep.horse
   
@@ -205,4 +208,8 @@
 - name: Peter Gassner
   site: https://www.gassner.io/
 
-- name: Nic C. (nicchan)
+- name: Ahmad Shadeed
+  site: https://ishadeed.com/articles/
+
+- name: Salma Alam-Naylor
+  site: https://whitep4nth3r.com/blog/
