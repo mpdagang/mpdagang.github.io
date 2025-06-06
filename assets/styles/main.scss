@@ -47,6 +47,12 @@ body {
   --mp-f-01: 1.1em;
 
   --mp-f-xl: 2em;
+
+  --mp-c-mn-00: #01060A;
+  --mp-c-mn-01: #050D13;
+  --mp-c-mn-02: #0B161D;
+  --mp-c-mn-03: #142028;
+  --mp-c-mn-04: #232C32;
 }
 
 h1, h2, h3, h4, h5 {
@@ -224,10 +230,12 @@ summary {
 -----------------------------------------*/
 
 .card-item {
-  padding: 0 15px;
-  border: 1px solid #ffffff;
+  padding: 0 20px;
+  background-color: var(--mp-c-mn-03);
+  box-shadow: 0 0 5px var(--mp-c-mn-01);
   border-radius: 8px;;
   transition: 0.3s;
+  color: #ffffffaa;
 }
 
 .card-item-link {
@@ -244,6 +252,8 @@ summary {
 
 .mp-u-principles {
   color: var(--mp-c-bg);
+  border-radius: 5px;
+  padding-inline: 5px;
 }
 
 .mp-u-details {
@@ -526,7 +536,7 @@ footer {
 .p-portfolio__skill-list li{
   padding: 0 0.5em;
   border-radius: 0.7em;
-  background-color: var(--mp-c-lua-08);
+  background-color: var(--mp-c-lua-09);
 }
 
 /*-- Readings*/
@@ -549,7 +559,6 @@ footer {
 
 .blog-card{
   min-height: 6em;
-  border: 1px solid var(--mp-c-fg);
   border-radius: 8px;
   padding: 0 10px 0;
   position: relative;
@@ -566,12 +575,18 @@ footer {
   position: absolute;
   top: -1.8em;
   background-color: var(--mp-c-bg);
+  padding-inline: 10px;
+  border-radius: 10px;
+}
+
+.blog-card:hover .blog-card-title {
+  border: 1px solid var(--mp-c-lua-03);
 }
 
 .blog-card-date {
   position: absolute;
   bottom: -0.6em;
-  background-color: var(--mp-c-fg);
+  background-color: var(--mp-c-mn-04);
   color: var(--mp-c-bg);
   display: inline-block;
   padding: 0 10px;
