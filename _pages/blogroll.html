@@ -47,6 +47,18 @@ permalink: /blogroll/
   </section>
 
   <section>
+    <h2>Engineer Masters</h2>
+    <div class="mp-l-pancake b-roll-wrapper">
+        {% for engineer in site.data.engineers %}
+        <a target="_blank" href="{{ engineer.site }}" class="mp-l-pancake-item blog-card">
+            <h4>{{ engineer.name }}</h4>
+            <p>{{ engineer.site }}</p>
+        </a>
+        {% endfor %}
+    </div>
+  </section>
+
+  <section>
     <h2>In Focus</h2>
     <div class="mp-l-pancake b-roll-wrapper">
         {% for infocus in site.data.infocii %}
