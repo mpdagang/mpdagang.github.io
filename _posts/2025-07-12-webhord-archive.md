@@ -4,12 +4,12 @@ title: WebHord and Web Curation
 
 _Human curation over automation._
 
-A four-post series about archiving bookmarks. Kind of feels in line of
+Just recently Alex Chan [ended a four-post series](https://alexwlchan.net/2025/my-favourite-websites/){: .b-link } about archiving bookmarks. Kind of feels in line of
 what Jeremy and Dave is talking about on creating resource directory
-although Alex's more of a personal one just like with Jake and Simon.
-These pockets of [Ark of Knowledges](https://ephemeranotes.substack.com/p/the-ark-of-leibniz-a-cabinet-of-knowledge) tend to spring up whenever I do link hopping across different disciplines of software development.
+although Alex's more of a personal one just like with [Jake](https://til.jakelazaroff.com/) and [Simon](https://til.simonwillison.net/).
+These pockets of [Ark of Knowledge](https://ephemeranotes.substack.com/p/the-ark-of-leibniz-a-cabinet-of-knowledge){: .b-link } tend to spring up whenever I do link and blog hopping across different disciplines of software development.
 
-Alex's series... I view it as a blueprint of what's to come. Maybe an idea of a webring or online library for resources is in order. A _resourceRing_ to rule them all, to bind them... 
+Alex's series... I view it as a blueprint of what's to come. Maybe an idea of a webring of online library for resources is in order. A _resourceRing_ to rule them all, to bind them... 
 
 Games do well when it comes to cohesively interconnect overworlds. So a gamified experience traversing these archives woudl be a fine touch maybe?
 
@@ -22,7 +22,7 @@ How to categorize let's say the front-end knowledge sphere, we can turn
 to the field of _Library and Information Science (LIS)_ as explained:
 > "...an interdisciplinary field of study that centers on the documentation that records our stories, memory, history, and knowledge. LIS professionals serve as custodians of printed materials, records, photographs, audiovisual materials, and ephemera, in both analog and digital form. Librarians and other information professionals collect, organize, preserve, and provide access to these materials and are the stewards of the knowledge that they contain. We connect people to the resources that they need to understand their histories, communities, and the world around them. We advocate for free and open access to these resources and train folks to use these materials to better themselves and society as life-long learners." - [School of Library and Information Science](https://slis.uiowa.edu/about/what-library-and-information-science){: .b-link }
 
-As I say frequently remember Katherine Goble say in the film _Hidden Figures_, "it could be old math."
+As I frequently remember Katherine Goble say in the film _Hidden Figures_, "it could be old math."
 We need an expert in human curation. It could be a known expert we've already established. And it gives me chills to think
 that from the digitization path we are in, we turn to our roots and ask
 a Librarian for help.
@@ -47,4 +47,4 @@ Curating a list of bookmarks (haha) in reference to this endeveor:
 - The term _WebHord_ is inspired by Dr Hana Videen's [Old English WordHord](https://oldenglishwordhord.com/about/){: .b-link } site:
   > "The Old English word wordhord (word-hoard) describes the collection of words and phrases that a poet may draw upon while crafting tales. Unlike a dictionary or other physical book, this stockpile of verses and vocabulary exists only in the poet’s mind."
 
-  So in that context, we draw upon our WebHords while crafting software. 
+  So in that context, we can think of it as drawing upon our WebHord while crafting software. 
