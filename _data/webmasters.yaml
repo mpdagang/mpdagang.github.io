@@ -28,11 +28,11 @@
 - name: Eric Meyer
   site: https://meyerweb.com/
 
-- name: Nolan Lawson
-  site: https://nolanlawson.com/
-
 - name: Zach Leatherman
   site: https://www.zachleat.com/
+
+- name: Nolan Lawson
+  site: https://nolanlawson.com/
 
 - name: Lea Verou
   site: https://lea.verou.me/
@@ -240,3 +240,9 @@
 
 - name: Jason Santa Maria
   site: https://jasonsantamaria.com/
+
+- name: Alistair Sheperd
+  site: https://alistairshepherd.uk/
+
+- name: Aaron Gustafson
+  site: https://www.aaron-gustafson.com
