@@ -27,3 +27,12 @@
 
 - name: Armin Ronacher
   site: https://lucumr.pocoo.org/
+
+- name: Jonathan Corbet
+  site: https://social.kernel.org/users/corbet
+
+- name: Dr. Axel Rauschmayer
+  site: https://2ality.com/
+
+- name: Drew DeVault (sourcehut)
+  site: https://drewdevault.com/

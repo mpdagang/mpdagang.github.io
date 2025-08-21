@@ -27,3 +27,15 @@
 
 - name: CSS Weekly
   site: https://css-weekly.com/
+
+- name: A11y Collective
+  site: https://www.a11y-collective.com/blog/
+
+- name: LWN
+  site: https://lwn.net/
+
+- name: Jason Kottke stream
+  site: https://kottke.org/
+
+- name: Lobsters
+  site: https://lobste.rs/

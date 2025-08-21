@@ -154,9 +154,6 @@
 - name: Jan Wildeboer
   site: https://jan.wildeboer.net/
 
-- name: Andrew Stephens
-  site: https://sheep.horse/
-
 - name: Frank Elavsky
   site: https://www.frank.computer/
 
@@ -249,3 +246,9 @@
 
 - name: Brecht (utilitybend)
   site: https://utilitybend.com/
+
+- name: Stanko (muffinman)
+  site: https://muffinman.io/
+
+- name: Declan Chidlow  (vale rocks)
+  site: https://vale.rocks/
