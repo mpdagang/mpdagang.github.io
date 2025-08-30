@@ -47,6 +47,9 @@ defaults:
     values:
       is_post: false
       layout: default
+collections: 
+  notes:
+    output: true
 
 include: [_pages]
 
