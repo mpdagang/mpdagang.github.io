@@ -7,17 +7,22 @@ permalink: /blogroll/
 <article class="mp-con mp-w-l">
   <header>
     <h1>Blogroll Cafe</h1>
-    <p>My frequented blogs for bleeding edge and exploratory web dev techniques.</p>
+    <p>My frequented blogs and sites when exploring the web.</p>
     <div class="mp-l-flex">
       <label class="toggle-switch">
           <input type="checkbox" />
           <span class="slider"></span>
       </label>
       <span>BlogTavern</span>
+      <a href="#s-web-master">webmasters</a>
+      <a href="#s-insight">insight</a>
+      <a href="#s-ph">ph</a>
+      <a href="#s-engineer">engineer</a>
+      <a href="#s-focus">infocus</a>
     </div>
   </header>
 
-  <section>
+  <section id="s-web-master">
     <h2>Web Masters</h2>
     <div class="mp-l-pancake b-roll-wrapper">
         {% for webmaster in site.data.webmasters %}
@@ -29,7 +34,7 @@ permalink: /blogroll/
     </div>
   </section>
 
-  <section>
+  <section id="s-insight">
     <h2>Insight/Introspection</h2>
     <div class="mp-l-pancake b-roll-wrapper">
         {% for introspect in site.data.introspects %}
@@ -41,7 +46,7 @@ permalink: /blogroll/
     </div>
   </section>
 
-  <section>
+  <section id="s-ph">
     <h2>PH</h2>
     <div class="mp-l-pancake b-roll-wrapper">
         {% for pinoy in site.data.phblog %}
@@ -53,7 +58,7 @@ permalink: /blogroll/
     </div>
   </section>
 
-  <section>
+  <section id="s-engineer">
     <h2>Engineer Masters</h2>
     <div class="mp-l-pancake b-roll-wrapper">
         {% for engineer in site.data.engineers %}
@@ -65,7 +70,7 @@ permalink: /blogroll/
     </div>
   </section>
 
-  <section>
+  <section id="s-focus">
     <h2>In Focus</h2>
     <div class="mp-l-pancake b-roll-wrapper">
         {% for infocus in site.data.infocii %}

@@ -39,3 +39,6 @@
 
 - name: Lobsters
   site: https://lobste.rs/
+
+- name: OddBird
+  site: https://www.oddbird.net/
