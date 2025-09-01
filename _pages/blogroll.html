@@ -7,18 +7,21 @@ permalink: /blogroll/
 <article class="mp-con mp-w-l">
   <header>
     <h1>Blogroll Cafe</h1>
+    
+    <a href="#s-web-master">webmasters</a>
+    <a href="#s-insight">insight</a>
+    <a href="#s-ph">ph</a>
+    <a href="#s-engineer">engineer</a>
+    <a href="#s-focus">infocus</a>
+    
     <p>My frequented blogs and sites when exploring the web.</p>
+
     <div class="mp-l-flex">
       <label class="toggle-switch">
           <input type="checkbox" />
           <span class="slider"></span>
       </label>
       <span>BlogTavern</span>
-      <a href="#s-web-master">webmasters</a>
-      <a href="#s-insight">insight</a>
-      <a href="#s-ph">ph</a>
-      <a href="#s-engineer">engineer</a>
-      <a href="#s-focus">infocus</a>
     </div>
   </header>
 
@@ -65,6 +68,18 @@ permalink: /blogroll/
         <a target="_blank" href="{{ engineer.site }}" class="mp-l-pancake-item blog-card">
             <h4>{{ engineer.name }}</h4>
             <p>{{ engineer.site }}</p>
+        </a>
+        {% endfor %}
+    </div>
+  </section>
+
+  <section id="s-gamedev">
+    <h2>Games</h2>
+    <div class="mp-l-pancake b-roll-wrapper">
+        {% for game in site.data.gamedev %}
+        <a target="_blank" href="{{ game.site }}" class="mp-l-pancake-item blog-card">
+            <h4>{{ game.name }}</h4>
+            <p>{{ game.site }}</p>
         </a>
         {% endfor %}
     </div>

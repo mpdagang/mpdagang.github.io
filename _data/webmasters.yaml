@@ -149,7 +149,7 @@
   site: https://bell.bz/
 
 - name: Kevin Powell
-  site: https://kevin-powell.kit.com/profile
+  site: https://kevin-powell.kit.com/
 
 - name: Jan Wildeboer
   site: https://jan.wildeboer.net/
@@ -178,15 +178,6 @@
 - name: Jorge Moreno Moro
   site: https://alterebro.com/
 
-- name: Raymond Schlitter
-  site: https://www.slynyrd.com
-
-- name: Muno 
-  site: https://bymuno.com/
-
-- name: Nolen Royalty
-  site: https://eieio.games/
-
 - name: Gabrielle Wee
   site: https://gabriellew.ee
 
@@ -207,6 +198,12 @@
 
 - name: Ahmad Shadeed
   site: https://ishadeed.com/articles/
+
+- name: Temani Afif
+  site: https://css-articles.com/
+
+- name: Amit Sheen
+  site: https://amitsh.com/website/feed/
 
 - name: Salma Alam-Naylor
   site: https://whitep4nth3r.com/blog/
@@ -261,3 +258,9 @@
 
 - name: Robb Knight
   site: https://rknight.me/blog/
+
+- name: Josh Collinsworth
+  site: https://joshcollinsworth.com/
+
+- name: Matt Hobbs (nooshu)
+  site: https://nooshu.com/blog/
