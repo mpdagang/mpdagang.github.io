@@ -1241,3 +1241,15 @@ two-up {
   transition-delay: 0s;
   translate: 0 0 calc(var(--x) + 0px);
 }
+
+.fps:has([data-link="visuals"]:hover) {
+  transform: rotatex(50deg) rotatez(135deg) scale3d(1.2, 1.2, 1.2);
+}
+
+.fps:has([data-link="proving"]:hover) {
+  transform: rotatex(70deg) rotatez(145deg) scale3d(1.2, 1.2, 1.2);
+}
+
+.fps:has([data-link="roll"]:hover) {
+  transform: rotatex(70deg) rotatez(125deg) scale3d(1.2, 1.2, 1.2);
+}
