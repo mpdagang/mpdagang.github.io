@@ -14,7 +14,7 @@ body {
   font-family: Tahoma, Arial, system-ui;
   font-size: 1rem;
   line-height: 1.4;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.03em;
   background-color: #0B161D;
   // color: #F8F8F8;
   color: #f2f3f3;
@@ -613,7 +613,9 @@ footer {
   transition: 0.3s;
 }
 
-.blog-card:hover{
+.blog-card:hover,
+.blog-card:active,
+.blog-card:focus{
   color: var(--mp-c-lua-03);
   border: 1px solid var(--mp-c-lua-03);
   transform: rotateZ(-1deg) scale(1.05);
