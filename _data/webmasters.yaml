@@ -226,9 +226,6 @@
 - name: Niko Kitsakis (NuberoDesign)
   site: https://www.nubero.ch/
 
-- name: Chris Krycho
-  site: https://v5.chriskrycho.com/
-
 - name: John December
   site: https://johndecember.com
 
@@ -267,3 +264,12 @@
 
 - name: July.lol (CRT)
   site: https://july.lol/blog.html
+
+- name: Sara Joy
+  site: https://sarajoy.dev/
+
+- name: Lynn Fisher
+  site: https://lynnandtonicblog.com/
+
+- name: Edward Loveall
+  site: https://blog.edwardloveall.com/
