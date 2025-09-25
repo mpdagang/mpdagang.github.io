@@ -273,3 +273,9 @@
 
 - name: Edward Loveall
   site: https://blog.edwardloveall.com/
+
+- name: Julia Evans
+  site: https://jvns.ca/
+
+- name: Daniel Stenberg (curl)
+  site: https://daniel.haxx.se/blog/
