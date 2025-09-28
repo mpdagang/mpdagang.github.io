@@ -599,6 +599,14 @@ footer {
   font-size: 0.9em;
 }
 
+.p-rdg-details {
+  border: 1px solid var(--mp-c-lua-15);
+  border-radius: 10px;
+  padding: 10px;
+  margin-block-end: 1em;
+  color: var(--mp-c-lua-15);
+}
+
 /*-- Blog*/
 
 .p-blog .card-list {
@@ -679,6 +687,48 @@ footer {
   font-size: 0.5em;
 }
 
+/*-- Notes*/
+
+.note-time {
+
+}
+
+.note-hr {
+  border-color: var(--mp-c-lua-03);
+}
+
+.p-note div.highlighter-rouge {
+  overflow-x: hidden;
+  padding: 10px;
+  box-shadow: 0 0 10px var(--mp-c-mn-00) inset;
+  border-radius: 10px;
+  background: #1a1a1a;
+}
+
+.p-note time {
+  font-size: 0.8em;
+  border-radius: 10px;
+  background-color: var(--mp-c-lua-03);
+  padding-inline: 0.5em;
+  color: var(--mp-c-bg);
+}
+
+.p-note time::after {
+  content: '';
+  background-color: inherit;
+  border-radius: 5px;
+  height: 0.2em;
+  left: 0;
+  position: absolute;
+  top: 0.9em;
+  width: 100%;
+  z-index: -1;
+}
+
+.note-block {
+  margin-block-end: 5em;
+  position: relative;
+}
 
 /*-- Principles*/
 
@@ -1245,13 +1295,16 @@ two-up {
 }
 
 .fps:has([data-link="visuals"]:hover) {
+  transition: 0.8s;
   transform: rotatex(50deg) rotatez(135deg) scale3d(1.2, 1.2, 1.2);
 }
 
 .fps:has([data-link="proving"]:hover) {
+  transition: 0.8s;
   transform: rotatex(70deg) rotatez(145deg) scale3d(1.2, 1.2, 1.2);
 }
 
 .fps:has([data-link="roll"]:hover) {
+  transition: 0.8s;
   transform: rotatex(70deg) rotatez(125deg) scale3d(1.2, 1.2, 1.2);
 }
