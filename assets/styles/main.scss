@@ -11,10 +11,9 @@ html {
 }
 
 body {
-  font-family: Tahoma, Arial, system-ui;
-  font-size: 1rem;
-  line-height: 1.4;
-  letter-spacing: 0.03em;
+  font-family: Tahoma, Geneva, Verdana, sans-serif, system-ui;
+  font-size: 1.15rem;
+  line-height: calc(0.2rem*8);
   background-color: #0B161D;
   // color: #F8F8F8;
   color: #f2f3f3;
@@ -268,6 +267,15 @@ summary {
 .mp-u-details:hover,
 .mp-u-details:open {
   margin-left: 10px;
+}
+
+.s-link {
+    background-color: var(--mp-c-lua-04);
+    border: 2px solid var(--mp-c-mn-04);
+    box-shadow: 0 4px var(--mp-c-mn-04);
+    border-radius: 5px;
+    padding: 3px 7px;
+    line-height: 1;
 }
 
 /* State
@@ -614,7 +622,6 @@ footer {
 }
 
 .blog-card{
-  min-height: 6em;
   border-radius: 8px;
   padding: 0 10px 0;
   position: relative;
