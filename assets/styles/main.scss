@@ -175,7 +175,7 @@ summary {
 
 .mp-l-grid-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .mp-l-grid-3 {
@@ -222,6 +222,11 @@ summary {
     gap: 10px;
     max-width: none;
     margin: 0;
+  }
+
+  .mp-l-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
