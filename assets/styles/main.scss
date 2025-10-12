@@ -692,12 +692,22 @@ footer {
 .b-link {
   color: var(--mp-c-lua-06);
   text-decoration: underline;
+  text-decoration-color: #9df39f57;
+  text-underline-offset: 0.1rem;
 }
 
 /*-- Blogroll*/
 
 .b-roll-wrapper a p {
   font-size: 0.5em;
+}
+
+.blog-card.b-roll-item {
+  border: 1px solid var(--mp-c-fg);
+}
+
+.blog-card.b-roll-item:hover {
+  border: 1px solid var(--mp-c-lua-03);
 }
 
 /*-- Notes*/

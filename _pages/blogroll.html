@@ -35,8 +35,8 @@ permalink: /blogroll/
     <h2>Web Masters</h2>
     <div class="mp-l-pancake b-roll-wrapper">
         {% for webmaster in site.data.webmasters %}
-        <a target="_blank" href="{{ webmaster.site }}" class="mp-l-pancake-item blog-card">
-            <h4>{{ webmaster.name }}</h4>
+        <a target="_blank" href="{{ webmaster.site }}" class="mp-l-pancake-item blog-card b-roll-item">
+            <h3>{{ webmaster.name }}</h3>
             <p>{{ webmaster.site }}</p>
         </a>
         {% endfor %}
@@ -47,8 +47,8 @@ permalink: /blogroll/
     <h2>Insight/Introspection</h2>
     <div class="mp-l-pancake b-roll-wrapper">
         {% for introspect in site.data.introspects %}
-        <a target="_blank" href="{{ introspect.site }}" class="mp-l-pancake-item blog-card">
-            <h4>{{ introspect.name }}</h4>
+        <a target="_blank" href="{{ introspect.site }}" class="mp-l-pancake-item blog-card b-roll-item">
+            <h3>{{ introspect.name }}</h3>
             <p>{{ introspect.site }}</p>
         </a>
         {% endfor %}
@@ -59,8 +59,8 @@ permalink: /blogroll/
     <h2>PH</h2>
     <div class="mp-l-pancake b-roll-wrapper">
         {% for pinoy in site.data.phblog %}
-        <a target="_blank" href="{{ pinoy.site }}" class="mp-l-pancake-item blog-card">
-            <h4>{{ pinoy.name }}</h4>
+        <a target="_blank" href="{{ pinoy.site }}" class="mp-l-pancake-item blog-card b-roll-item">
+            <h3>{{ pinoy.name }}</h3>
             <p>{{ pinoy.site }}</p>
         </a>
         {% endfor %}
@@ -71,8 +71,8 @@ permalink: /blogroll/
     <h2>Engineer Masters</h2>
     <div class="mp-l-pancake b-roll-wrapper">
         {% for engineer in site.data.engineers %}
-        <a target="_blank" href="{{ engineer.site }}" class="mp-l-pancake-item blog-card">
-            <h4>{{ engineer.name }}</h4>
+        <a target="_blank" href="{{ engineer.site }}" class="mp-l-pancake-item blog-card b-roll-item">
+            <h3>{{ engineer.name }}</h3>
             <p>{{ engineer.site }}</p>
         </a>
         {% endfor %}
@@ -83,8 +83,8 @@ permalink: /blogroll/
     <h2>Games</h2>
     <div class="mp-l-pancake b-roll-wrapper">
         {% for game in site.data.gamedev %}
-        <a target="_blank" href="{{ game.site }}" class="mp-l-pancake-item blog-card">
-            <h4>{{ game.name }}</h4>
+        <a target="_blank" href="{{ game.site }}" class="mp-l-pancake-item blog-card b-roll-item">
+            <h3>{{ game.name }}</h3>
             <p>{{ game.site }}</p>
         </a>
         {% endfor %}
@@ -95,8 +95,8 @@ permalink: /blogroll/
     <h2>In Focus</h2>
     <div class="mp-l-pancake b-roll-wrapper">
         {% for infocus in site.data.infocii %}
-        <a target="_blank" href="{{ infocus.site }}" class="mp-l-pancake-item blog-card">
-            <h4>{{ infocus.name }}</h4>
+        <a target="_blank" href="{{ infocus.site }}" class="mp-l-pancake-item blog-card b-roll-item">
+            <h3>{{ infocus.name }}</h3>
             <p>{{ infocus.site }}</p>
         </a>
         {% endfor %}
