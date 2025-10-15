@@ -12,8 +12,9 @@ html {
 
 body {
   font-family: Tahoma, Geneva, Verdana, sans-serif, system-ui;
-  font-size: 1.15rem;
+  font-size: clamp(0.9rem, 2dvw, 1.15rem);
   line-height: calc(0.2rem*8);
+  letter-spacing: 0.01em;
   background-color: #0B161D;
   // color: #F8F8F8;
   color: #f2f3f3;
@@ -87,6 +88,14 @@ ul {
 
 summary {
   cursor: pointer;
+}
+
+blockquote {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-inline-start: 0;
+  padding: 0rem 0rem 0rem 1.5rem;
+  font-style: italic;
+  border-left: 2px solid var(--mp-c-lua-03);
 }
 
 .mp-c-lua-02 {
