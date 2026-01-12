@@ -1,5 +1,5 @@
 - name: Molly White
-  site: https://www.citationneeded.news/
+  site: https://www.mollywhite.net/
 
 - name: Alex Russell
   site: https://infrequently.org/
@@ -111,3 +111,9 @@
 
 - name: Dan Mcquillan
   site: https://www.danmcquillan.org/
+
+- name: Jamie Zawinski
+  site: https://www.jwz.org/blog/
+
+- name: Jan van den Berg 
+  site: https://janvandenberg.blog/
